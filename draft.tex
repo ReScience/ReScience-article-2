@@ -250,7 +250,7 @@ assertion).\\
 % As you may have guessed by now, this was the main motivation for
  %the creation of the ReScience journal\citep{^2].
 
-\section*{Replication and reproduction in computer-aided research}
+\section*{Replication and reproduction}
 
 With the increasing recognition of the replication crisis as a problem
 for scientific research, it has become a major subject of debate, but
@@ -260,7 +260,7 @@ specific technical and social obstacles on the road to published
 results and findings that can be verified by other scientists. Here we
 briefly summarize the obstacles that arise from the use of computers
 and software in scientific research, and introduce the terminology we
-will use in the rest of this article.
+will use in the rest of this article.\\
 
 \textit{Reproducing} the result of a computation means running the
 same software on the same input data and obtaining the same results.
@@ -296,7 +296,7 @@ it is not the software that is of interest for science, but the models
 and methods that it implements. The software is merely a vehicle to
 perform computations based on these models and methods. If results
 depend on hard to control implementation details of the software,
-their relation to the underlying models and methods becomes unclear.
+their relation to the underlying models and methods becomes unclear.\\
 
 \textit{Replicating} a published result means writing and then running
 new software based on the description of a computational model or
@@ -327,18 +327,6 @@ models and methods being applied in the original work, in the form of
 software source code. The holy grail of computational science is
 therefore a reproducible replication of reproducible original work.
 
-\section*{Reproducibility is harder than you think}
-
-\citeauthor{Mesnard:2016} explains in \citep{Mesnard:2016} that performing
-reproducible and replicable simulations in computational fluid dynamics is harder
-than you think. In fact, there are several different reasons for
-non-reproducibility that, for the most part, are specific to each
-scientifc domain. However, from our publishing experience, there are also some
-common behaviors that can be identified. Missing code and/or data, unknown
-dependencies, inaccurate or imprecise description appears to be shared
-characteristic of a lot of non-reproducible work.\\
-
-To be extended...
 
 \section*{The ReScience initiative}
 
@@ -356,7 +344,7 @@ creation of the ReScience journal (\url{rescience.github.io}) by Konrad Hinsen
 and Nicolas Rougier in 2015.\\
 
 \begin{tcolorbox}[breakable, pad at break*=1mm,
-                  colback=black!2.5, arc=0pt, outer arc=0pt, boxrule=0pt]
+                  colback=black!2.5, arc=0pt, outer arc=0pt, boxrule=.25pt]
 \begin{footnotesize}
 \textbf{Box 1.} Authors having  published in Rescience explain their motivation.\\
 
@@ -483,6 +471,18 @@ implementation is proposed, this must not rejected on this criterion.
 %% addressing reviewers' comments.  Furthermore, publishing in ReScience is a way
 %% to actively contribute to open science while adding to one's publication
 %% record.
+%% \section*{Reproducibility is harder than you think}
+
+%% \citeauthor{Mesnard:2016} explains in \citep{Mesnard:2016} that performing
+%% reproducible and replicable simulations in computational fluid dynamics is harder
+%% than you think. In fact, there are several different reasons for
+%% non-reproducibility that, for the most part, are specific to each
+%% scientifc domain. However, from our publishing experience, there are also some
+%% common behaviors that can be identified. Missing code and/or data, unknown
+%% dependencies, inaccurate or imprecise description appears to be shared
+%% characteristic of a lot of non-reproducible work.\\
+
+%% To be extended...
 
 %\Discussion*{Discussion}
 %\subsection*{An Utopia for Tomorrow}
@@ -505,29 +505,56 @@ implementation is proposed, this must not rejected on this criterion.
     the publication will be endorsed by authors A and authors B with
     identified roles and will be certified as reproducible because it
     has been replicated by an independent group.}
+  \label{fig:coscience}
 \end{figure}
 
 
 \section*{Discussion}
 
 % -> Short-term vs long-term reproducibility
-The code accompanying a ReScience replication ensures only short-term
-reproducibility. Even if a piece of code is written following best practices,
-and then reviewed and tested, it suffers from the same problem as any other piece of
-code, i.e. it depends on a software stack whose stability is not guaranteed in
-the long term. \citep{Mesnard:2016} illustrated this problem very clearly when
-they tried to reproduce their own work performed two years earlier. Even though Barba's
-group is committed to reproducible research practices, they did not escape the many
-problems one can face when trying to re-run a piece of code. This means the
-newly produced code for ReScience will likely be obsolete at some point in the
-future. It can be a matter of months or years, or even decades, but ultimately, obsolescence is inevitable. Therefore, the long-term value of a ReScience
-publication is not the actual code but the accompanying article. If you
-consider the original article with missing or incomplete information and the
-new article with missing and checked information, you have a complete and
-consistent description of the original work. This means than 5, 10 or 20 years
-from now, one should be able to replicate the work thanks to these two
+
+There are several different reasons for non-reproducibility. For the most part,
+those reasons are specific to each scientifc domain but, from our publishing
+experience, there are also some common behaviors that can be identified.
+Missing code and/or data, unknown dependencies, inaccurate or imprecise
+description appears to be shared characteristic of a lot of non-reproducible
+work. If the code accompanying a ReScience replication can fix a lot of these
+issue, it can nonetheless only ensure short-term reproducibility. Even if a
+piece of code is written following best practices, and then reviewed and
+tested, it suffers from the same problem as any other piece of code, i.e. it
+depends on a software stack whose stability is not guaranteed in the long
+term. \citep{Mesnard:2016} illustrated this problem very clearly when they
+tried to reproduce their own work performed two years earlier. Even though
+Barba's group is committed to reproducible research practices, they did not
+escape the many problems one can face when trying to re-run a piece of code.
+This means the newly produced code for ReScience will likely be obsolete at
+some point in the future. It can be a matter of months or years, or even
+decades, but ultimately, obsolescence is inevitable. Therefore, the long-term
+value of a ReScience publication is not the actual code but the accompanying
+article. If you consider the original article with missing or incomplete
+information and the new article with missing and checked information, you have
+a complete and consistent description of the original work. 5, 10 or 20 years
+from now, anyone should be able to replicate the work thanks to these two
 articles. Of course, the new code can also help, but the true value of a
-replication is the accompanying article.
+replication is really the accompanying article.\\
+
+One immediate and legitimate question is to wonder to what extent such
+replication could be performed prior to the publication of the original
+article. This would strongly reinforce a claim because a successful and
+independent replication would have been performed prior to the publication. As
+illustrated on figure \ref{fig:coscience}, this would require for a group A to
+contact a group B and to send them their a draft of their original work (the
+one that would be normally submitted to a journal) such that group B could run
+a replication and confirm or infirm the work. In case of confirmation, a
+certified article could be later published with both group as authors (each
+group being identified according to their respective roles). However, if the
+replication failed and the original work cannot be fixed, this would prevent
+the publication. This model would improve the overall reproducibiloty and would
+slow down considerably the pace of publication we're observing
+today. Unfortunately, such scenario is highly improbable. The pressure to
+publish is so strong and the incentive for doing replication so low that it
+would most probably prevent such collaborative work. At this point, CoScience
+is mostly an utopia for tomorrow.
 
 % -> Long term storage: Software Heritage
 
