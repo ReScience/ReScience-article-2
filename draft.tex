@@ -183,64 +183,62 @@
 
 
 \section*{Introduction}
-There is a replication crisis in Science. It has been recently highlighted in
-medicine \citep{ioannidis:2005}, in psychology \citep{nosek:2015}, in
-political sciences \citep{janz:2015} and even more recently in biomedical
+There is a replication crisis in Science. It has recently been highlighted in
+medicine \citep{ioannidis:2005}, psychology \citep{nosek:2015}, the
+political sciences \citep{janz:2015}, and even more recently in the biomedical
 sciences \citep{iqbal:2016}. The reasons for such non-reproducibility are as
-diverse as these domains can be. In medicine, the {\em study power and bias, the
+diverse as these domains are. In medicine, the {\em study power and bias, the
 number of other studies on the same question, and, importantly, the ratio of
 true to no relationships among the relationships probed in each scientific
-field} are important criterion as reported by \citep{ioannidis:2005}. In psychology,
-the infamous p-value seems to be the root of all evil while in biomedical
+field} are important causes, as reported by \citep{ioannidis:2005}. In psychology,
+the infamous p-value seems to be the root of all evil, while in the biomedical
 sciences, \citep{iqbal:2016} identified a {\em lack of access to full datasets and
 detailed protocols for both clinical and non-clinical biomedical
-investigation}. Surprisingly enough, computational sciences (in the broad
-sense) and computer sciences are no exception even though they rely mostly on
-code and data that are assumed to be not prone to the aforementioned
+investigation}. Surprisingly enough, the computational sciences (in the broad
+sense) and computer sciences are no exception, even though they rely mostly on
+code and data that are believed to be not prone to the aforementioned
 problems.\\
 
-When \citep{collberg:2014, collberg:2015} decided to measure precisely the
-extent of the problem, they investigated the availability of the code and data,
+When \citep{collberg:2014, collberg:2015} decided to measure the
+extent of the problem precisely, they investigated the availability of code and data,
 and {\em the extent to which this code would actually build with reasonable
-  effort}. The results were dramatic: on the 515 potentially reproducible
-papers (out of 613) targeted by the study, authors managed to ultimately run
-only 102 of them. Less than 20\%. It is to be underlined that authors only
-studied the possibility to run the code. They did not even check for the
-correctness of the code (does the code actually implements what is advertised
-in the paper) nor the replicability of the results (does the run lead to the
+  effort}. The results were dramatic: of the 515 potentially reproducible
+papers (out of 613) targeted by the study, the authors managed to ultimately run
+only 102, i.e. less than 20\%. It is to be underlined that the authors only
+investigated the possibility to run the code. They did not check for the
+correctness of the code (does the code actually implement what is advertised
+in the paper), nor the replicability of the results (does the run lead to the
 same results as in the paper).  \citep{topalidou:2015a} encountered the same
 problem when they tried to replicate a model from the computational
-neuroscience literature: source code were not part of the supplementary section
-of the paper and no link nor repository were given in the main text. When they
-finally get their hands on the code (after contacting the corresponding
-author), it was only to realize it cannot be compiled and was mostly
+neuroscience literature: source code was not part of the supplementary section
+of the paper and no link or repository was provided in the main text. When they
+finally got their hands on the code, after contacting the corresponding
+author, it was only to realize that it could not be compiled and was mostly
 unusable.\\
 
-Confronted to the problem, a small but growing number of journals and
+Confronted with this problem, a small but growing number of journals and
 publishers have decided to react and have adopted explicit data and software
-policies. See for example the Plos
+policies. See for example the PLOS instructions on
 \href{http://journals.plos.org/plosone/s/materials-and-software-sharing}{Materials
   and Software Sharing} and
-\href{http://journals.plos.org/plosone/s/data-availability}{Data Availability}
+on \href{http://journals.plos.org/plosone/s/data-availability}{Data Availability},
 or the
 \href{https://elifesciences.org/elife-news/inside-elife-forking-software-used-elife-papers-github}{recent
   annoucement} by eLife on forking software used in eLife papers to GitHub.
-Such policy will guarantee access to code and data in a proper format
-\citep{perkel:2016} but this won't guarantee reproducilbility nor
+Such policies will ensure access to code and data in a well-defined format
+\citep{perkel:2016} but this will not guarantee reproducilbility, nor
 correctness. At the educational level, things have started to change with a
 growing literature on best practices for making code reproducible
 \citep{sandve:2013, crook:2013, wilson:2014, halchenko:2015, janz:2015,
-  hinsen:2015}. Original initiative such as software and data carpentry
-\citep{wilson:2016} are worth to be mentionned since their goal is {\em to make
+  hinsen:2015}. Original initiatives such as Software and Data Carpentry
+\citep{wilson:2016} are worth mentioning since their goal is {\em to make
   scientists more productive, and their work more reliable, by teaching them
-  basic computing skills}. Obviously, such best practices could be as well
-applied to already published research software or code, provided the original
-author(s) is willing to take the challenge of re-implementing his/her own
-software for the sake of Science. This is unlikely since, unfortunately, the
-incentives for doing such a time-consuming task are low or nonexistent.
-Furthermore, if the original author did some mistake in his/her original
-implementation, chances are that he/she'll reproduce the same mistake over and
-over again (just an educated guess, we have no data supporting this
+  basic computing skills}. Obviously, such best practices could be applied as well to already published research software or code, provided the original
+authors are willing to take on the challenge of re-implementing their own
+software for the sake of better science. This is unlikely since, unfortunately, the
+incentives for doing such time-consuming work are low or nonexistent.
+Furthermore, if the original authors made mistakes in their original
+implementation, chances are that they will reproduce the same mistakes again (just an educated guess, we have no data supporting this
 assertion).\\
 
 %% At this point, the question is what do we do? Do we have to declare
@@ -254,29 +252,28 @@ assertion).\\
 
 \section*{Reproducibility is harder than you think}
 
-\citeauthor{Mesnard:2016} explains in \citep{Mesnard:2016} that writing
-reproducible and replicable computational fluid dynamics simulation is harder
+\citeauthor{Mesnard:2016} explains in \citep{Mesnard:2016} that performing
+reproducible and replicable simulations in computational fluid dynamics is harder
 than you think. In fact, there are several different reasons for
-non-reproducibility that, for the most part, largely depends on the specific
+non-reproducibility that, for the most part, are specific to each
 scientifc domain. However, from our publishing experience, there are also some
 common behaviors that can be identified. Missing code and/or data, unknown
 dependencies, inaccurate or imprecise description appears to be shared
-characteristics of a lot of work.\\
+characteristic of a lot of non-reproducible work.\\
 
 To be extended...
 
 \section*{The ReScience initiative}
 
-Writing a replication might be a daunting task that is usually hardly or not
-rewarded. Nevertheless, some people are actually willing to replicate
-computational research. The motivation for doing so is very diverse and range
-from the simple student who want to train oneself in order to get familiar with
-a specific scientific domain up to the senior researcher that has a critical
-need of a specific piece of code (see Box 1). If these people write a brand new
-open source implementation of some published research, chances are this new
-implementation may be of great interest for other people as well, includign
-original authors. The question is where to publish such replication. To the
-best of our knowledge, no journal would accept to publish a single successful
+Writing a replication is a daunting task that is traditionally hardly or not
+at all rewarded. Nevertheless, some people are actually willing to replicate
+computational research. The motivations for doing so are very diverse (see Box 1). Students may want familiarize themselves with
+a specific scientific domain, and acquire relevant practical experience by replicating important published work. Senior researchers may critically
+need a specific piece of code for a research project and therefore re-implement a published computational method. If these people write a brand new
+open source implementation of already published research, chances are that this new
+implementation may be of great interest for other people as well, including
+the original authors. The question is where to publish such a replication. To the
+best of our knowledge, no major journal would accept to publish a single successful
 replication in computational science. This has been the main motivation for the
 creation of the ReScience journal (\url{rescience.github.io}) by Konrad Hinsen
 and Nicolas Rougier in 2015.\\
@@ -301,14 +298,14 @@ ReScience in the future.\\
 
 \textbf{(\cite{topalidou:2015b})} Our initial motivation and the main reason
 for replicating the model is that we needed it in order to collaborate with our
-neurobiologist colleagues. When we arrived in our new lab, the model has just
-been published (2013) but the original author left the lab a few months before
-our arrival. There were no public repository, no version control and the paper
+neurobiologist colleagues. When we arrived in our new lab, the model had just
+been published (2013) but the original author had left the lab a few months before
+our arrival. There was no public repository nor version control, and the paper
 describing the model was incomplete and partly inaccurate. We managed to get
 our hands on the original sources (6,000 lines of Delphi) only to realize we
 could not compile them. It took us three months to replicate it using 250 lines
-of Python. But at this time, there were no place to publish this kind of
-replication and share the new code with colleagues. Since then, we have refined
+of Python. But at this time, there was no place to publish this kind of
+replication to share the new code with colleagues. Since then, we have refined
 the model and made new predictions that have been confirmed. Our initial
 replication effort really gave the model a second life.\\
 
@@ -316,11 +313,11 @@ replication effort really gave the model a second life.\\
 task every time we want to build a new model: either because we want to build
 on it, or because we want to compare to it. We also give replication tasks to
 M.Sc. students every year, as projects. In all these cases, we are confronted
-to incomplete or inaccurate model descriptions, as well as to the impossibility
+with incomplete or inaccurate model descriptions, as well as with the impossibility
 to obtain the original results. Contacting the original authors sometimes
 solves the problem, but not so often (because of the {\em dog ate my hard
   drive} syndrom). We thus accumulate knowledge, internal to the lab, about
-which model work, which doesn't, and how a given model has to be parameterized
+which model works and which doesn't, and how a given model has to be parameterized
 to really work. Without any place to publish it, this knowledge is
 wasted. Publishing it in ReScience, opening the discussion publicly, will be a
 progress for all of us. \par
@@ -336,52 +333,50 @@ articles have been published and 3 are currently under review
 \href{https://github.com/ReScience/ReScience-submission/pull/27}{\#27},
 \href{https://github.com/ReScience/ReScience-submission/pull/30}{\#30}). The
 editorial board covers a wide range of computational sciences (see
-\url{http://rescience.github.io/board/}) and there are more than 70 registered
-reviewers that have volunteered. The computational domains of published work
+\url{http://rescience.github.io/board/}) and more than 70 volunteers have registered to be reviewers. The computational domains of published work
 are in computational neuroscience, neuroimaging, computational ecology and
 computer graphics with a majority in computational neuroscience. There is a
-strong bias in favor of successful replication (100\%) and experience has
-taught us researcher are reluctant to publish a failed replication (even when
-there is a way to prove the original work is wrong). For a young researcher,
-there is a social/professional risk in publishing an article where he/she shows
-that the results from a senior researcher are wrong. Until we implement a
+strong bias towards successful replication (100\%) and experience has
+taught us that researchers are reluctant to publish failed replications, even when they can prove that the original work is wrong. For young researchers,
+there is a social/professional risk in publishing articles that show
+results from a senior researcher to be wrong. Until we implement a
 certified anonymized submission process, this strong bias will most likely
 remain.\\
 
-One of the specificity of the ReScience journal is its publishing chain that is
+One of the specificities of the ReScience journal is its publishing chain that is
 radically different from any other traditional scientific journals since
 ReScience lives on GitHub. Each submission takes the form of a pull request
 that is first considered by a member of the editorial board, who may decide to
 reject the submission, or assign it to two reviewers for further review and
 tests. The reviewers evaluate the code and the accompanying material in
 continuous interaction with the authors through the discussion section. If both
-reviewers managed to run the code and obtain the same results as the ones
+reviewers manage to run the code and obtain the same results as the ones
 advertised in the accompanying material, the submission is
 accepted. Furthermore, an author cannot submit a replication of his/her own
 research, nor the research of close collaborators. Mistakes in the
 implementation of research questions and methods are often due to biases
-authors invariably have, consciously or not. One's biases will inevitably carry
-over to how one approaches a replication. Perhaps even more importantly, this
-aims at the cross-fertilization of research and trying to replicate the work of
+authors invariably have, consciously or not. Such biases will inevitably carry
+over to how one approaches a replication. Perhaps even more importantly, 
+cross-fertilization is generally useful in research, and trying to replicate the work of
 one’s peers might pave the way for a future collaboration, or may give rise to
 new ideas as a result of the replication effort.\\
 
 The main criterion for acceptation is the actual replication of the research
 with a clear statement by the authors explaining why they think they have
 replicated the paper (same figures, same graphics, same behavior,
-etc.). However, the clarity of the code is an important criterion because
-uncommented or obfuscated code is as bad as no code at all. A code without the
+etc.). However, the clarity of the code is an important criterion as well because
+uncommented or obfuscated code is no better than no code at all. A code without an
 accompanying article is also a criterion for rejection since we’re not human
 compilers (well not all of us at least). The role of the reviewer is thus to
-ensure the proposed submission is actually replicable. This means:
+ensure that the proposed submission is actually replicable. This means:
 %
 \begin{itemize}
-\item One should be able to run the proposed implementation on hi/her computer
-\item One should obtain the same results as indicated in the accompanying paper
-\item These results must correspond to the original paper
+\item They are able to run the proposed implementation on their computers.
+\item They obtain the same results as indicated in the accompanying paper.
+\item These results are sufficiently close to the ones reported in the original paper being replicated.
 \end{itemize}
 %
-The goal of the review is thus to help the author to meet ReScience quality
+The goal of the review is thus to help the author to meet the ReScience quality
 standards through discussion. More specifically, since ReScience targets
 replication of original research, there is no need to judge the relevance or
 novelty of the research. The review concentrates on how easy it would be for
@@ -417,37 +412,38 @@ implementation is proposed, this must not rejected on this criterion.
 
 \begin{figure}
   \includegraphics[width=1.0\columnwidth]{CoScience}
-  \caption{\textbf{A} The ReScience publication chain starts from an original
-    research by authors A, published in a journal, in proceedings or as a
-    preprint. This article constitutes the base material for authors B that
-    will attempt to replicate the work based on its description. Success or
-    failure to replicate is not a criterion for rejection even though failure
-    to replicate will requires more precaution to ensure this is not a
-    misunderstanding or a bug in the new code. After review and once published,
-    a feedback is given to original author and editor to inform them the work
-    has been replicated (or not). \textbf{B} The CoScience proposal would
-    require for the replication to happen before the actual publication. In
-    case of failure, nothing will be published, in case of success, the
-    publication will be endorsed by authors A and authors B with identified
-    roles and will be certified as reproducible because it has beenactually
-    replicated by an independent group.}
+  \caption{\textbf{A} The ReScience publication chain starts from an
+    original research by authors A, published in a journal, in
+    conference proceedings, or as a preprint. This article constitutes
+    the base material for authors B who attempt to replicate the work
+    based on its description. Success or failure to replicate is not a
+    criterion for acceptance or rejection, even though failure to
+    replicate requires more precaution to ensure this is not a
+    misunderstanding or a bug in the new code. After review, the
+    replication is published, and feedback is given to original
+    authors (and editors) to inform them the work has been replicated
+    (or not). \textbf{B} The CoScience proposal would require the
+    replication to happen \textit{before} the actual publication. In
+    case of failure, nothing will be published. In case of success,
+    the publication will be endorsed by authors A and authors B with
+    identified roles and will be certified as reproducible because it
+    has been replicated by an independent group.}
 \end{figure}
 
 
 \section*{Discussion}
 
 % -> Short-term vs long-term reproducibility
-The code accompanying a ReScience replication ensures only a short term
-reproducibility. Even if a piece of code is written enforcing best practices,
-is reviewed and tested, it suffers from the same problem as any other piece of
+The code accompanying a ReScience replication ensures only short-term
+reproducibility. Even if a piece of code is written following best practices,
+and then reviewed and tested, it suffers from the same problem as any other piece of
 code, i.e. it depends on a software stack whose stability is not guaranteed in
 the long term. \citep{Mesnard:2016} illustrated this problem very clearly when
-they tried to reproduce their own work two years apart. Even though Barba's
-group is committed to reproducible software, they did not escape the many
+they tried to reproduce their own work performed two years earlier. Even though Barba's
+group is committed to reproducible research practices, they did not escape the many
 problems one can face when trying to re-run a piece of code. This means the
-newly produced code for ReScience will be deprecated at some point in the
-future. It can be a matter of months or years (or even decades), but in the
-end, it will be deprecated. However, the long-term value of a ReScience
+newly produced code for ReScience will likely be obsolete at some point in the
+future. It can be a matter of months or years, or even decades, but ultimately, obsolescence is inevitable. Therefore, the long-term value of a ReScience
 publication is not the actual code but the accompanying article. If you
 consider the original article with missing or incomplete information and the
 new article with missing and checked information, you have a complete and
