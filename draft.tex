@@ -250,6 +250,83 @@ assertion).\\
 % As you may have guessed by now, this was the main motivation for
  %the creation of the ReScience journal\citep{^2].
 
+\section*{Replication and reproduction in computer-aided research}
+
+With the increasing recognition of the replication crisis as a problem
+for scientific research, it has become a major subject of debate, but
+unfortunately no common terminology has emerged so far. One reason for
+this diverse use of terms is that each field of research has its own
+specific technical and social obstacles on the road to published
+results and findings that can be verified by other scientists. Here we
+briefly summarize the obstacles that arise from the use of computers
+and software in scientific research, and introduce the terminology we
+will use in the rest of this article.
+
+\textit{Reproducing} the result of a computation means running the
+same software on the same input data and obtaining the same results.
+Obstacles to reproducibility are the loss of parts of the software or
+input data, lack of a computing environment that is sufficiently
+similar to the one used initially, and insufficient instructions for
+making the software work. An obstacle specific to numerical
+computations is the use of floating-point arithmetic, whose rules are
+subject to slightly different interpretations by different compilers
+and runtime support systems.
+
+Publishing a reproducible computational result implies publishing all
+the software and all the input data, or references to previously
+published software and data, along with the traditional article
+describing the work. An obvious added value is the availability of the
+software and data, which helps readers to gain a better understanding
+of the work, and can be re-used in other research projects. In
+addition, reproducibly published results are more trustworthy, because
+many common mistakes in working with computers can be excluded:
+mistyping parameter values or input file names, updating the software
+but forgetting to mention the changes in the description of the
+method, planning to use one version of some software but actually
+using a different one, etc.
+
+Strictly speaking, reproducibility is defined in the context of
+identical computational environments. However, useful scientific
+software is expected to be robust with respect to certain changes in
+this environment. A computer program that produces different results
+when compiled using different compilers, or run on two different
+computers, would be considered suspect by most practitioners, even if
+it were demonstrably correct in one specific environment. Ultimately
+it is not the software that is of interest for science, but the models
+and methods that it implements. The software is merely a vehicle to
+perform computations based on these models and methods. If results
+depend on hard to control implementation details of the software,
+their relation to the underlying models and methods becomes unclear.
+
+\textit{Replicating} a published result means writing and then running
+new software based on the description of a computational model or
+method provided in the original publication, and obtaining results
+which support the same scientific conclusions as the original
+ones. The main obstacle to replicability is an incomplete or imprecise
+description of the models and methods.
+
+Replicability is a much stronger quality indicator than
+reproducibility. In fact, reproducibility merely guarantees that all
+the ingredients of a computation are well documented. It does not
+imply that any of them are correct and/or appropriate for implementing
+the models and methods that were meant to be applied, nor that the
+descriptions of these models and methods are correct and clear. A
+successful replication shows that two teams have produced independent
+implementations that generate equivalent results, which makes serious
+mistakes in either software unlikely. Moreover, it shows that the
+second team was able to understand the description provided by the
+first team.
+
+Replication can be attempted both for reproducible and for
+non-reproducible results. However, when an attempt to replicate
+non-reproducible work fails, yielding results so different that the
+scientific conclusions drawn from them are different, it can be very
+difficult to identify the cause of the disagreement. Reproducibility
+guarantees the existence of a precise and complete description of the
+models and methods being applied in the original work, in the form of
+software source code. The holy grail of computational science is
+therefore a reproducible replication of reproducible original work.
+
 \section*{Reproducibility is harder than you think}
 
 \citeauthor{Mesnard:2016} explains in \citep{Mesnard:2016} that performing
