@@ -22,14 +22,14 @@
 \usepackage[most]{tcolorbox}
 
 % Better default font (Libertine and Inconsolata)
-% \usepackage[ttscale=.875]{libertine}
-% \usepackage[scaled=0.96]{zi4}
+\usepackage[ttscale=.875]{libertine}
+\usepackage[scaled=0.96]{zi4}
 
-\usepackage{mathspec}
-\setmainfont{Minion Pro Cond}
-\setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
-\setmathrm{Minion Pro}
-\setsansfont{MyriadPro-Cond}
+%% \usepackage{mathspec}
+%% \setmainfont{Minion Pro Cond}
+%% \setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
+%% \setmathrm{Minion Pro}
+%% \setsansfont{MyriadPro-Cond}
 
 \usepackage{nicefrac}
 
@@ -81,7 +81,7 @@
 \pagestyle{fancy}
 % \fancyhf{}
 \rhead{\footnotesize \sf page \thepage}
-\lhead{\footnotesize \sf Rougier et al. 2017
+\lhead{\footnotesize \sf Rougier, Hinsen et al. 2017
        \textbullet~The ReScience Initiative}
 \rfoot{}
 \cfoot{}
@@ -104,6 +104,7 @@
 %%   overlay={\begin{tcbclipinterior}\fill[green!75!blue!50!white] (frame.south west)
 %%     rectangle node[text=white,font=\sffamily\bfseries\tiny,rotate=0] {ID} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
 
+\newcommand{\hgap}{\hspace{1mm}}
 
 \usepackage{tikz}
 \usetikzlibrary{positioning,shapes,shadows,arrows}
@@ -129,37 +130,56 @@
 \title{Long-Term Reproducibility through Replication:\\
        the ReScience Initiative}
 \author{%
-  \textbf{Nicolas P. Rougier}$^{1,2,3,*}$,
-  \textbf{Konrad Hinsen}$^{4,5}$,
-  \textbf{Thomas Arildsen}$^{?}$,
-  \textbf{Lorena Barba}$^{?}$,
-  \textbf{Fabien Benureau}$^{?}$,
-  \textbf{C. Titus Brown}$^{?}$,
-  \textbf{Georgios Detorakis}$^{?}$,
-  \textbf{Emmanuelle Gouillart}$^{?}$,
-  \textbf{Pierre de Buyl}$^{?}$,
-  \textbf{Benoît Girard}$^{?}$,
-  \textbf{Olivia Guest}$^{?}$,
-  \textbf{Mehdi Khamassi}$^{?}$,
-  \textbf{Etienne Roesch}$^{?}$,
-  \textbf{Joseph Stachelek}$^{?}$,
-  \textbf{Owen Petchey}$^{?}$,
-  \textbf{Timothée Poisot}$^{?}$,
-  \textbf{Karthik Ram}$^{?}$,
-  \textbf{Yoav Ram}$^{?}$
-  \textbf{Federico Vaggi}$^{?}$,
-  \textbf{Julien Vitay}$^{?}$,
-  \textbf{Tiziano Zito}$^{?}$\\
-  \begin{footnotesize}
+  \begin{small}
+\textbf{Nicolas P. Rougier}$^{1,*}$\href{http://orcid.org/0000-0002-6972-589X}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Konrad Hinsen}$^{2}$\href{http://orcid.org/0000-0003-0330-9428}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Thomas Arildsen}$^{3}$\href{http://orcid.org/0000-0003-3254-3790}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Lorena Barba}$^{4}$\href{http://orcid.org/0000-0001-5812-2711}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Fabien C. Y. Benureau}$^{5}$\href{http://orcid.org/0000-0003-4083-4512}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{C. Titus Brown}$^{6}$\href{http://orcid.org/0000-0001-6001-2677}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Pierre de Buyl}$^{7}$\href{http://orcid.org/0000-0002-6640-6463}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Andrew Davison}$^{8}$\href{http://orcid.org/0000-0002-4793-7541}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Marc André Delsuc}$^{9}$\href{http://orcid.org/0000-0002-1400-5326}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Georgios Detorakis}$^{10}$\href{http://orcid.org/0000-0001-5891-1702}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Damien Drix}$^{11}$\href{http://orcid.org/0000-0003-4107-5693}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Pierre Enel}$^{12}$\href{http://orcid.org/0000-0001-8983-6223}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Benoît Girard}$^{13}$\href{http://orcid.org/0000-0002-8117-7064}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Emmanuelle Gouillart}$^{14}$\href{http://orcid.org/0000-0002-3869-9967}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Olivier Grisel}$^{15}$\href{http://orcid.org/0000-0002-8226-4012}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Olivia Guest}$^{16}$\href{http://orcid.org/0000-0002-1891-0972}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Matt Hall}$^{17}$\href{http://orcid.org/0000-0002-9530-5477}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Xavier Hinaut}$^{18}$\href{http://orcid.org/0000-0002-1924-1184}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Mehdi Khamassi}$^{19}$\href{http://orcid.org/0000-0002-2515-1046}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Almar Klein}$^{20}$\href{http://orcid.org/0000-0002-9978-2780}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Pietro Marchesi}$^{21}$\href{http://orcid.org/0000-0001-5955-6909}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Dan McGlinn}$^{22}$\href{http://orcid.org/0000-0003-2359-3526}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Hans Ekkehard Plesser}$^{23}$\href{http://orcid.org/0000-0001-7843-5993}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Timothée Poisot}$^{24}$\href{http://orcid.org/0000-0002-0735-5184}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Karthik Ram}$^{25}$\href{http://orcid.org/0000-0002-0233-1757}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Yoav Ram}$^{26}$\href{http://orcid.org/0000-0002-9653-4458}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Etienne Roesch}$^{27}$\href{http://orcid.org/0000-0002-8913-4173}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Cyrille Rossant}$^{28}$\href{http://orcid.org/0000-0003-2069-9093}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Aaron Shifman}$^{29}$\href{http://orcid.org/0000-0003-2140-7590}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Joseph Stachelek}$^{30}$\href{http://orcid.org/0000-0002-5924-2464}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Marcel Stimberg}$^{31}$\href{http://orcid.org/0000-0002-2648-4790}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Federico Vaggi}$^{32}$\href{http://orcid.org/0000-0001-8100-158X}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Julien Vitay}$^{33}$\href{http://orcid.org/0000-0001-5229-2349}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Anya Vostinar}$^{34}$\href{http://orcid.org/0000-0001-7216-5283}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Roman Yurchak}$^{35}$\href{http://orcid.org/0000-0002-2565-4444}{\includegraphics[width=8pt]{iD-icon.pdf}},
+\textbf{Tiziano Zito}$^{36}$,
+\textbf{Ozan Çağlayan}$^{37}$\href{http://orcid.org/0000-0002-5992-3470}{\includegraphics[width=8pt]{iD-icon.pdf}}\\
+\end{small}
+\begin{footnotesize}
+  \vspace{2mm}
     $^{1}$INRIA Bordeaux Sud-Ouest
-          Talence, France
-    $^{2}$Institut des Maladies Neurodégénératives, Université de Bordeaux,
-          CNRS, UMR 5293, Bordeaux, France
-    $^{3}$LaBRI, Université de Bordeaux, Institut Polytechnique de Bordeaux,
-          CNRS, UMR 5800, Talence, France
-    $^{4}$Centre de Biophysique Moléculaire,
-          CNRS UPR4301, Orléans Cedex 2
-    $^{5}$Synchrotron SOLEIL, Division Expériences,
+          Talence, France --
+          Institut des Maladies Neurodégénératives, Université de Bordeaux,
+          CNRS UMR 5293, Bordeaux, France -- 
+          LaBRI, Université de Bordeaux, Institut Polytechnique de Bordeaux,
+          CNRS UMR 5800, Talence, France •
+    $^{2}$Centre de Biophysique Moléculaire,
+          CNRS UPR4301, Orléans --
+          Synchrotron SOLEIL, Division Expériences,
           Gif sur Yvette, France\\
     $^{*}$Corresponding author:
           \href{mailto:Nicolas.Rougier@inria.fr}{Nicolas.Rougier@inria.fr}          
