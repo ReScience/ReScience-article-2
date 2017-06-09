@@ -527,52 +527,81 @@ replication effort.
 \end{figure}
 
 
-\section*{Discussion}
+\section*{Lessons learned}
 
-% -> Short-term vs long-term reproducibility
+Although ReScience is still a young project, the submissions handled
+so far already provide valuable experience concerning the
+reproducibility and replicability of computational work in scientific
+research.
 
-There are several different reasons for non-reproducibility. For the most part,
-those reasons are specific to each scientifc domain but, from our publishing
-experience, there are also some common behaviors that can be identified.
-Missing code and/or data, unknown dependencies, inaccurate or imprecise
-description appears to be shared characteristic of a lot of non-reproducible
-work. If the code accompanying a ReScience replication can fix a lot of these
-issue, it can nonetheless only ensure short-term reproducibility. Even if a
-piece of code is written following best practices, and then reviewed and
-tested, it suffers from the same problem as any other piece of code, i.e. it
-depends on a software stack whose stability is not guaranteed in the long
-term. \citep{Mesnard:2016} illustrated this problem very clearly when they
-tried to reproduce their own work performed two years earlier. Even though
-Barba's group is committed to reproducible research practices, they did not
-escape the many problems one can face when trying to re-run a piece of code.
-This means the newly produced code for ReScience will likely be obsolete at
-some point in the future. It can be a matter of months or years, or even
-decades, but ultimately, obsolescence is inevitable. Therefore, the long-term
-value of a ReScience publication is not the actual code but the accompanying
-article. If you consider the original article with missing or incomplete
-information and the new article with missing and checked information, you have
-a complete and consistent description of the original work. 5, 10 or 20 years
-from now, anyone should be able to replicate the work thanks to these two
-articles. Of course, the new code can also help, but the true value of a
-replication is really the accompanying article.\\
+\subsection*{Short-term and long-term reproducibility}
 
-One immediate and legitimate question is to wonder to what extent such
-replication could be performed prior to the publication of the original
-article. This would strongly reinforce a claim because a successful and
-independent replication would have been performed prior to the publication. As
-illustrated on figure \ref{fig:coscience}, this would require for a group A to
-contact a group B and to send them their a draft of their original work (the
-one that would be normally submitted to a journal) such that group B could run
-a replication and confirm or infirm the work. In case of confirmation, a
-certified article could be later published with both group as authors (each
-group being identified according to their respective roles). However, if the
-replication failed and the original work cannot be fixed, this would prevent
-the publication. This model would improve the overall reproducibiloty and would
-slow down considerably the pace of publication we're observing
-today. Unfortunately, such scenario is highly improbable. The pressure to
-publish is so strong and the incentive for doing replication so low that it
-would most probably prevent such collaborative work. At this point, CoScience
-is mostly an utopia for tomorrow.
+While some of the reasons for non-reproducibility are specific to each
+scientifc domain, our experience has shown that there are also some
+common issued that can be identified.  Missing code and/or data,
+undocumented dependencies, and inaccurate or imprecise description
+appear to be characteristic of much non-reproducible work. Moreover,
+these problems are not always easy to detect even for attentive
+reviewers, as we discovered when some articles published in ReScience
+turned out to be difficult to reproduce for someone else for exactly
+the reasons listed above. ReScience reviewers are scientists working
+in the same domain as the submitting authors, because familiarity with
+the field is a condition for judging if a replication is
+succesful. But this also means that our reviewers share a significant
+common background with the authors, and that background includes the
+software packages and programming languages adopted by their
+community.  In particular, if both authors and reviewers have
+essential libraries of their community installed on their computers,
+they may not notice that these libraries are actually dependencies of
+the submitted code.  While solutions to this problem evidently exist
+(ReScience could, for example, request that authors make their
+software work on a standard computational environment supplied in the
+form of a virtual machine), they represent an additional effort to
+authors and therefore discourage from submitting replication work to
+ReScience.  Our goal is to develop a set of recommendations for
+authors that represent a workable compromise between reproducibility
+and implementation effort.\\
+
+Another issue with reproducibility is that with today's computing
+technology, long-term reproducibility can only be achieved by imposing
+drastic constraints on languages and libraries that are not compatible
+with the requirements of research computing. This problem is nicely
+illustrated by \citep{Mesnard:2016} whose authors report trying to
+reproduce their own work performed two years earlier. Even though
+Barba's group is committed to reproducible research practices, they
+did not escape the many problems one can face when trying to re-run a
+piece of code. As a consequence, the code newly produced for ReScience
+will likely cease to be functional at some point in the future.
+Therefore, the long-term value of a ReScience publication is not the
+actual code but the accompanying article. The combination of the
+original article and the replication article provide a complete and
+consistent description of the original work, as evidenced by the fact
+that replication was possible. Even 5, 10, or 20 years later, a
+competent scientist should be able to replicate the work again thanks
+to these two articles. Of course, the new code can also help, but the
+true long-term value of a replication is the accompanying article.\\
+
+\section*{Outlook}
+
+One immediate and legitimate question is to wonder to what extent a
+replication could be performed \textit{prior} to the publication of
+the original article. This would strongly reinforce a claim because a
+successful and independent replication would be available right from
+the start. As illustrated in figure \ref{fig:coscience}, this would
+require for a group A to contact a group B and send them a draft of
+their original work (the one that would be normally submitted to a
+journal) such that group B could perform a replication and confirm or
+infirm the results. In case of confirmation, a certified article could
+be later published with both groups as authors (each group being
+identified according to their respective roles). However, if the
+replication fails and the original work cannot be fixed, this would
+prevent publication. This model would improve the quality of
+computational research and also slow down considerably the rapid pace
+of publication we are observing today. Unfortunately, such a scenario
+seems highly improbable today. The pressure to publish is so strong
+and the incentive for doing replication so low that it would most
+probably prevent such collaborative work. At this point, CoScience is
+just a utopia for tomorrow.
 
 % -> Long term storage: Software Heritage
 
