@@ -69,7 +69,6 @@
             linktocpage=false,
             hyperindex=true,
             linkbordercolor=white]{hyperref}
-\usepackage{hyperref}
 \hypersetup{colorlinks=true}
 
 
@@ -329,13 +328,13 @@ reproducible replication of reproducible original work.
 
 \section*{The ReScience initiative}
 
-Performing a replication is a daunting task that is traditionally hardly or not
-at all rewarded. Nevertheless, some people are actually willing to replicate
-computational research. The motivations for doing so are very diverse (see Box 1). Students may want familiarize themselves with
+Performing a replication is a daunting task that is traditionally not well
+rewarded. Nevertheless, some people are actually willing to replicate
+computational research. The motivations for doing so are very diverse (see Box 1). Students may want to familiarize themselves with
 a specific scientific domain, and acquire relevant practical experience by replicating important published work. Senior researchers may critically
 need a specific piece of code for a research project and therefore re-implement a published computational method. If these people write a brand new
 open source implementation of already published research, chances are that this new
-implementation may be of great interest for other people as well, including
+implementation may be of interest for other people as well, including
 the original authors. The question is where to publish such a replication. To the
 best of our knowledge, no major journal accepts publishing replications in computational science. This has been the main motivation for the
 creation of the ReScience journal (\href{https://rescience.github.io}{rescience.github.io}) by Konrad Hinsen and Nicolas P. Rougier in September 2015.\\
@@ -388,16 +387,16 @@ progress for all of us. \par
 
 ReScience is an openly peer-reviewed journal that targets computational research
 and encourages the explicit replication of already published research. In order
-to provide the largest benefit to the scientific community, replications are
+to provide the largest possible benefit to the scientific community, replications are
 required to be reproducible and open-source. In less than two years of existence, 12
 articles have been published and 3 are currently under review
 (\href{https://github.com/ReScience/ReScience-submission/pull/20}{\#20},
 \href{https://github.com/ReScience/ReScience-submission/pull/27}{\#27},
 \href{https://github.com/ReScience/ReScience-submission/pull/30}{\#30}). The
 editorial board covers a wide range of computational sciences (see
-\url{http://rescience.github.io/board/}) and more than 70 volunteers have registered to be reviewers. The computational domains of published work
-are in computational neuroscience, neuroimaging, computational ecology and
-computer graphics with a majority in computational neuroscience. There is a
+\url{http://rescience.github.io/board/}) and more than 70 volunteers have registered to be reviewers. The scientific domains of published work
+are computational neuroscience, neuroimaging, computational ecology and
+computer graphics, with a majority in computational neuroscience. There is a
 strong bias towards successful replication (100\%) and experience has
 taught us that researchers are reluctant to publish failed replications, even when they can prove that the original work is wrong. For young researchers,
 there is a social/professional risk in publishing articles that show
@@ -407,8 +406,11 @@ remain.\\
 
 One of the specificities of the ReScience journal is its publishing
 chain that is radically different from any other traditional
-scientific journals since ReScience lives on GitHub. One of the
-consequences is that the whole process, from submission via reviewing
+scientific journals since ReScience lives on GitHub, a platform
+originally designed for collaborative software development. A
+ReScience submission is treated very similarly to a contribution to an
+Open Source software project. One of the consequences is that the
+whole process, from submission via reviewing
 to publication, is open for anyone to see and even comment on.\\
 
 Each submission takes the form of a pull request that is first
@@ -418,7 +420,7 @@ criteria of ReScience. A submission must contain
 \begin{itemize}
 \item a precise reference to the work being replicated,
 \item an explanation of why the authors think they have replicated the paper
-      (same figures, same graphics,same behavior, etc.),
+      (same figures, same graphics, same behavior, etc.),
 \item a description of any difficulties encountered during the
       replication,
 \item open-source code that produces the replication results,
@@ -426,7 +428,7 @@ criteria of ReScience. A submission must contain
 \end{itemize}
 A complete submission therefore consists of both code and an accompanying
 article. Partial replications that cover only some of the results in the
-original work are acceptable, but need to be justified.\\
+original work are acceptable, but must be justified.\\
 
 If the submission respects these criteria, the editor assigns it to
 two reviewers for further evaluation and tests. The reviewers evaluate
@@ -435,13 +437,12 @@ the authors through the discussion section until both reviewers
 consider the work acceptable for publication. The goal of the review
 is thus to help the authors meet the ReScience quality standards
 through discussion. Since ReScience targets replication of already
-published work, the criteria of relevance or novelty applied by most
+published work, the criteria of importance or novelty applied by most
 traditional journals are irrelevant.
 
 For a submission to be accepted, both reviewers must consider it
 reproducible and a valid replication of the original work. As we
-explained in section~\ref{sec:replication-reproduction}, this means
-that the reviewers
+explained earlier, this means that the reviewers
 \begin{itemize}
 \item are able to run the proposed implementation on their computers,
 \item obtain the same results as indicated in the accompanying paper,
@@ -455,7 +456,7 @@ that the reviewers
 % standalone implementation is proposed, this must not rejected on this
 % criterion.
 
-Since independent implementation is a major criterion in replication
+Since independent implementation is a major feature of replication
 work, ReScience does not allow authors to submit replications of their
 own research, nor the research of close collaborators. Mistakes in the
 implementation of computational models and methods are often due to
