@@ -42,3 +42,19 @@
 @anyaevostinar : Anya V.
 @ozancaglayan  : Ozan Çağlayan
 @ogrisel       : Olivier Grisel
+@AdamRTomkins  : Adam Tomkins
+
+# Published corresponding authors
+
+@rougier       : Nicolas P. Rougier
+@gviejo        : Guillaume Viejo
+@jsta          : Joseph Stachelek
+@gdetor        : Georgios Detorakis
+@opetchey      : Owen Petchey
+@vitay         : Julien Vitay
+@andruhamax    : Andrei Maksimov
+@maekclena     : Erwan Le Masson
+@aaronshifman  : Aaron Shifman
+@RafaelNH      : Rafael Neto Henriques
+@Vahidrostami  : Vahid Rostami
+@rougier       : Nicolas P. Rougier
