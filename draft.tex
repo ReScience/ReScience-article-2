@@ -22,14 +22,14 @@
 \usepackage[most]{tcolorbox}
 
 % Better default font (Libertine and Inconsolata)
-% \usepackage[ttscale=.875]{libertine}
-% \usepackage[scaled=0.96]{zi4}
+\usepackage[ttscale=.875]{libertine}
+\usepackage[scaled=0.96]{zi4}
 
-\usepackage{mathspec}
-\setmainfont{Minion Pro Cond}
-\setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
-\setmathrm{Minion Pro}
-\setsansfont{MyriadPro-Cond}
+%% \usepackage{mathspec}
+%% \setmainfont{Minion Pro Cond}
+%% \setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
+%% \setmathrm{Minion Pro}
+%% \setsansfont{MyriadPro-Cond}
 
 \usepackage{nicefrac}
 
@@ -81,7 +81,7 @@
 \pagestyle{fancy}
 % \fancyhf{}
 \rhead{\footnotesize \sf page \thepage}
-\lhead{\footnotesize \sf Rougier et al. 2017
+\lhead{\footnotesize \sf Rougier, Hinsen et al. 2017
        \textbullet~The ReScience Initiative}
 \rfoot{}
 \cfoot{}
@@ -104,6 +104,7 @@
 %%   overlay={\begin{tcbclipinterior}\fill[green!75!blue!50!white] (frame.south west)
 %%     rectangle node[text=white,font=\sffamily\bfseries\tiny,rotate=0] {ID} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
 
+\newcommand{\hgap}{\hspace{1mm}}
 
 \usepackage{tikz}
 \usetikzlibrary{positioning,shapes,shadows,arrows}
@@ -129,40 +130,14 @@
 \title{Long-Term Reproducibility through Replication:\\
        the ReScience Initiative}
 \author{%
-  \textbf{Nicolas P. Rougier}$^{1,2,3,*}$,
-  \textbf{Konrad Hinsen}$^{4,5}$,
-  \textbf{Thomas Arildsen}$^{?}$,
-  \textbf{Lorena Barba}$^{?}$,
-  \textbf{Fabien Benureau}$^{?}$,
-  \textbf{C. Titus Brown}$^{?}$,
-  \textbf{Georgios Detorakis}$^{?}$,
-  \textbf{Emmanuelle Gouillart}$^{?}$,
-  \textbf{Pierre de Buyl}$^{?}$,
-  \textbf{Benoît Girard}$^{?}$,
-  \textbf{Olivia Guest}$^{?}$,
-  \textbf{Mehdi Khamassi}$^{?}$,
-  \textbf{Etienne Roesch}$^{?}$,
-  \textbf{Joseph Stachelek}$^{?}$,
-  \textbf{Owen Petchey}$^{?}$,
-  \textbf{Timothée Poisot}$^{?}$,
-  \textbf{Karthik Ram}$^{?}$,
-  \textbf{Yoav Ram}$^{?}$
-  \textbf{Federico Vaggi}$^{?}$,
-  \textbf{Julien Vitay}$^{?}$,
-  \textbf{Tiziano Zito}$^{?}$\\
-  \begin{footnotesize}
-    $^{1}$INRIA Bordeaux Sud-Ouest
-          Talence, France
-    $^{2}$Institut des Maladies Neurodégénératives, Université de Bordeaux,
-          CNRS, UMR 5293, Bordeaux, France
-    $^{3}$LaBRI, Université de Bordeaux, Institut Polytechnique de Bordeaux,
-          CNRS, UMR 5800, Talence, France
-    $^{4}$Centre de Biophysique Moléculaire,
-          CNRS UPR4301, Orléans Cedex 2
-    $^{5}$Synchrotron SOLEIL, Division Expériences,
-          Gif sur Yvette, France\\
-    $^{*}$Corresponding author:
-          \href{mailto:Nicolas.Rougier@inria.fr}{Nicolas.Rougier@inria.fr}          
+  \begin{small}
+    \input{authors.tex}
+  \end{small}
+\begin{footnotesize}
+  \vspace{2mm}
+  \input{affiliations.tex}
+  $^{*}$Corresponding author:
+        \href{mailto:Nicolas.Rougier@inria.fr}{Nicolas.Rougier@inria.fr}          
   \end{footnotesize}
 }
 
@@ -359,8 +334,7 @@ open source implementation of already published research, chances are that this 
 implementation may be of great interest for other people as well, including
 the original authors. The question is where to publish such a replication. To the
 best of our knowledge, no major journal accepts publishing replications in computational science. This has been the main motivation for the
-creation of the ReScience journal (\url{rescience.github.io}) by Konrad Hinsen
-and Nicolas Rougier in 2015.\\
+creation of the ReScience journal (\href{https://rescience.github.io}{rescience.github.io}) by Konrad Hinsen and Nicolas P. Rougier in September 2015.\\
 
 \begin{tcolorbox}[breakable, pad at break*=1mm,
                   colback=black!2.5, arc=0pt, outer arc=0pt, boxrule=.25pt]

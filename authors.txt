@@ -1,0 +1,60 @@
+# Editors in chief
+
+@rougier       : Nicolas P. Rougier
+@khinsen       : Konrad Hinsen
+
+# Editors
+
+@otizonaizit   : Tiziano Zito
+@pdebuyl       : Pierre de Buyl
+@emmanuelle    : Emmanuelle Gouillart
+@ctb           : C. Titus Brown
+@ThomasA       : Thomas Arildsen
+@tpoisot       : Timothée Poisot
+@karthik       : Karthik Ram
+@oliviaguest   : Olivia Guest
+@labarba       : Lorena Barba
+
+# Active reviewers
+
+@MehdiKhamassi : Mehdi Khammasi
+@benoit-girard : Benoit Girad
+@vitay         : Julien Vitay
+@gdetor        : Georgios Detorakis
+@dmcglinn      : Dan McGlinn 
+@yoavram       : Yoav Ram
+@FedericoV     : Federico Vaggi
+@heplesser     : Hans Ekkehard Plesser
+@apdavison     : Andrew Davidson
+@neuronal      : Xavier Hinaut
+@piero-le-fou  : Pierre Enel
+@mstimberg     : Marcel Stimberg
+@rossant       : Cyrille Rossant
+@eroesch       : Etienne Roesch
+@damiendr      : Damien Drix
+@delsuc        : Marc-André Delsuc
+@soolijoo      : Matt G Hall
+@benureau      : Fabien Benureau
+@rth           : Roman Yurchak
+@almarklein    : Almar Klein
+@pietromarchesi: Pietro Marchesi
+@aaronshifman  : Aaron Shifman
+@anyaevostinar : Anya V.
+@ozancaglayan  : Ozan Çağlayan
+@ogrisel       : Olivier Grisel
+@AdamRTomkins  : Adam Tomkins
+
+# Published corresponding authors
+
+@rougier       : Nicolas P. Rougier
+@gviejo        : Guillaume Viejo
+@jsta          : Joseph Stachelek
+@gdetor        : Georgios Detorakis
+@opetchey      : Owen Petchey
+@vitay         : Julien Vitay
+@andruhamax    : Andrei Maksimov
+@maekclena     : Erwan Le Masson
+@aaronshifman  : Aaron Shifman
+@RafaelNH      : Rafael Neto Henriques
+@Vahidrostami  : Vahid Rostami
+@rougier       : Nicolas P. Rougier
