@@ -649,7 +649,75 @@ option for ReScience was to adopt a software development platform and
 develop a set of procedures that make it usable for scientific
 publishing.
 
+Our experience shows that the GitHub platform provides excellent
+support for reviewing process, which is not surprising given that the
+review of a scientific article containing code is not fundamentally
+different from the review of code with accompanying documentation.
+One potential issue for other journals envisaging to adopt this
+platform is the necessity for submitting authors to have a basic
+knowledge of the version control system git and of the techniques of
+collaborative software development. Given the code-centric nature of
+ReScience, this has not been a major problem for us, and the minor
+ones could be resolved by our editors providing technical assistance
+to authors. It is of course possible that potential authors are
+completely discouraged from submitting to ReScience by their lack
+of the required technical competence, but so far nobody has
+provided feedback suggesting that this is a problem.
 
+The main inconvenience of the GitHub platform is its almost complete
+lack of support for the publishing steps, once a submission has
+successfully passed the reviewing process. At this point, the
+submission consists of an article text in Markdown format plus a set
+of code and data files in a git repository. The desired archival form
+is an article in PDF format plus a permanent archive of the submitted
+code and data, with a Digital Object Identifier (DOI) providing a
+permanent reference. The \href{https://zenodo.org/}{Zenodo} platform
+allows straightforward archiving of snapshots of a repository hosted
+on GitHub, and issues a DOI for the archive. This leaves the task
+of producing a PDF version of the article, which is currently assumed
+by the editor handling the submission, in order to ease the technical
+burden on our authors.
+
+A minor inconvenience of the GitHub platform is its implementation of
+code reviews. It is designed for reviewing contributions to a
+collaborative project. The contributor submits new code and
+modifications to existing code in the form of a ``pull request'',
+which other project members can then comment on. In the course of the
+exchanges, the contributor can update the code and request further
+comments. Once everybody is satisfied, the contribution is ``merged''
+into the main project. In the case of ReScience, the collaborative
+project is the whole journal, and each article submission is a
+contribution proposed as a pull request. This is, however, not a very
+intuitive representation of how a journal works. It would be more
+natural to have a separate repository for each article, an arrangement
+that would also facilitate the final publishing steps. However, GitHub
+does not allow code review on a new repository, only on contributions
+to an already existing one.
+
+Relying on a free-use offer on a commercial platform poses some
+additional problems for scientific publishing. GitHub can change its
+conditions at any time, and could in principle delete or modify
+ReScience contents at any time without prior notice. Moreover, in the
+case of technical problems rendering ReScience contents temporarily or
+permanently inaccessible, the ReScience community has no legal claims
+for compensation because there is no contract that would imply any
+obligations for GitHub. It would clearly be imprudent to count on
+GitHub for long-term preservation of ReScience content, which is why
+we deposit accepted articles on Zenodo, a platform designed for
+archiving scientific information and funded by research organizations
+as an element of public research infrastructure.
+
+The use of free services provided by GitHub and Zenodo was clearly
+important to get ReScience started. The incentives for the publication
+of replication work being low, and its importance being recognized
+only slowly in the scientific community, funding ReScience through
+either author page charges or grants would have created further
+obstacles to its success. A less obvious advantage of not having to
+organize funding is that ReScience can exist without being backed by
+any legal entity that would manage its budget. This makes it possible
+to maintain a community spirit focused on shared scientific
+objectives, with nobody in a position to influence ReScience by
+explicit or implicit threats of reducing future funding.
 
 \section*{Outlook}
 
