@@ -11,13 +11,14 @@ reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn",
              "aaronshifman"]
 replicators = ["gviejo", "gdetor", "MehdiKhamassi", "benoit-girard", "opetchey",
                "Vahidrostami", "jsta", "Fjanks", "ChristophMetzner", "vitay",
-               "andruhamax", "maekclena", "aaronshifman", "RafaelNH"]
+               "andruhamax", "falex33", "aaronshifman", "RafaelNH"]
 
 # Adding names that are not part of the board
 board = {}
 board["Guillaume Viejo"] = ["gviejo", "---"]
 board["Andrei Maksimov"] = ["andruhamax", "---"]
 board["Erwan Le Masson"] = ["maekclena", "---"]
+board["Frédéric Alexandre"] = ["falex33", "0000-0002-6113-1878"]
 board["Rafael Neto Henriques"] = ["RafaelNH", "---"]
 board["Vahid Rostami"] = ["Vahidrostami", "---"]
 board["Frank Stollmeier"] = ["Fjanks", "0000-0003-4858-0895"]
