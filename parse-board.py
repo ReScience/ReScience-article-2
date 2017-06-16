@@ -4,7 +4,7 @@ chiefs = ["rougier", "khinsen"]
 editors = ["otizonaizit", "pdebuyl", "emmanuelle", "ctb", "ThomasA", "tpoisot",
            "karthik", "oliviaguest", "labarba"]
 reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn",
-             "yoavram", "FedericoV", "AdamRTomkins", "heplesser", "apdavison",
+             "yoavram", "FedericoV",  "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
              "damiendr", "delsuc", "ogrisel", "soolijoo", "benureau", "rth",
              "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
@@ -17,7 +17,6 @@ replicators = ["gviejo", "gdetor", "MehdiKhamassi", "benoit-girard", "opetchey",
 board = {}
 board["Guillaume Viejo"] = ["gviejo", "---"]
 board["Andrei Maksimov"] = ["andruhamax", "---"]
-board["Erwan Le Masson"] = ["maekclena", "---"]
 board["Frédéric Alexandre"] = ["falex33", "0000-0002-6113-1878"]
 board["Rafael Neto Henriques"] = ["RafaelNH", "---"]
 board["Vahid Rostami"] = ["Vahidrostami", "---"]
