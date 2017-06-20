@@ -33,7 +33,7 @@ affiliations = {
     "piero-le-fou" : "Friedman Brain Institute, Icahn School of Medicine at Mount Sinai, NY, USA",
     "almarklein" : "Independent scholar, Enschede, The Netherlands",
     "benureau" : "INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France",
-    "khinsen" : "Centre de Biophysique Moléculaire, CNRS UPR4301, Orléans -- Synchrotron SOLEIL, Division Expériences, Gif sur Yvette, France",
+    "khinsen" : "Centre de Biophysique Moléculaire, CNRS UPR4301, Orléans, France -- Synchrotron SOLEIL, Division Expériences, Gif sur Yvette, France",
     "rougier" : "INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France",
     "karthik" : "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA",
     "ozancaglayan" : "Laboratoire d'Informatique de l'Université du Maine (LIUM), Le Mans, France",
