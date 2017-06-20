@@ -1,42 +1,83 @@
 import re
+import collections
 
+affiliations = {
+    "eroesch" : "Centre for Integrative Neuroscience, School of Psychology, University of Reading, UK",
+    "ThomasA" : "Department of Electronic Systems, Faculty of Engineering and Science, Aalborg University, Denmark",
+    "ChristophMetzner" : "Centre for Computer Science and Informatics Research, University of Hertfordshire, UK",
+    "apdavison" : "Unité de Neurosciences, Information et Complexité, Centre National de la Recherche Scientifique, Gif-sur-Yvette, France",
+    "MehdiKhamassi":  "Institute of Intelligent Systems and Robotics, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",
+    "benoit-girard" : "Institute of Intelligent Systems and Robotics, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",
+    
+    "Vahidrostami": "Institute of Neuroscience \\& Medicine (INM-6) and Institute for Advanced Simulation (IAS-6) -- JARA-Brain Institute I (INM-10), Jülich Research Center, Jülich, Germany",
+    "neuronalX" : "INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France",
+    "pietromarchesi" : "Swammerdam Institute for Life Sciences, Center for Neuroscience, Faculty of Science, University of Amsterdam, Amsterdam, the Netherlands",
+    "vitay" :"Professorship for Artificial Intelligence, Department of Computer Science, Chemnitz University of Technology, Chemnitz, Germany",
+    "rossant" : "Institute of Neurology, University College London, UK",
+    "soolijoo" : "UCL Great Ormond St Institute of Child Health. University College London, London, UK",
+    "oliviaguest" : "Experimental Psychology, University College London, UK",
+    "mstimberg" : "Sorbonne Universités, UPMC Univ Paris 06, INSERM, CNRS, Institut de la Vision, Paris, France",
+    "heplesser" : "Faculty of Science and Technology, Norwegian University of Life Sciences, Aas, Norway -- Institute of Neuroscience and Medicine (INM-6), Jülich Research Centre, Jülich, Germany",
+    "rth" : "Symerio, Palaiseau, France",
+    "delsuc" : "IGBMC, INSERM U964, CNRS UMR 7104, Université de Strasbourg, Illkirch, France",
+    "dmcglinn" : "Department of Biology, College of Charleston, Charleston, SC, USA",
+    "labarba" : "Department of Mechanical and Aerospace Engineering, the George Washington University, Washington DC, USA",
+    "pdebuyl" : "Instituut voor Theoretische Fysica, KU Leuven, Belgium -- PdB is a postdoctoral fellow of the Research Foundation -- Flanders (FWO)",
+    "jsta" : "Department of Fisheries and Wildlife, Michigan State University, MI, USA",     
+    "Fjanks" : "Network Dynamics, Max Planck Institute for Dynamics and Self-Organization, Germany",
+    "damiendr" : "Department of Computer Science, Humboldt-Universität zu Berlin",
+    "gviejo" : "Montreal Neurological Institute, McGill University, Montreal, Canada",
+    "otizonaizit" : "Neural Information Processing Group, University of Tübingen, Germany",
+    "gdetor" : "Department of Cognitive Sciences, University of California Irvine, USA",
+    "aaronshifman" : "Department of Biology, University of Ottawa, Ottawa, Ontario, Canada",
+    "piero-le-fou" : "Friedman Brain Institute, Icahn School of Medicine at Mount Sinai, NY, USA",
+    "almarklein" : "Independent scholar, Enschede, The Netherlands",
+    "benureau" : "INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France",
+    "khinsen" : "Centre de Biophysique Moléculaire, CNRS UPR4301, Orléans, France -- Synchrotron SOLEIL, Division Expériences, Gif sur Yvette, France",
+    "rougier" : "INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France",
+    "karthik" : "Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA",
+    "ozancaglayan" : "Laboratoire d'Informatique de l'Université du Maine (LIUM), Le Mans, France",
+    "falex33" : "INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France",    
+    "RafaelNH" : "MRC Cognition and Brain Sciences Unit, Cambridge, UK",
+    "yoavram" : "Department of Biology, Stanford University, Stanford, CA, USA",
+    "anyaevostinar" : "Department of Computer Science, Grinnell College, IA, USA",
+    "tpoisot" : "Département de Sciences Biologiques, Université de Montréal, Montréal, Canada",
+    "ctb":  "Department of Population Health and Reproduction, University of California Davis, Davis, CA, USA",
+    "opetchey" : "Department of Evolutionary Biology and Environmental Studies, University of Zurich, Switzerland",
+}
+
+# Commented names have declined or not answered yet
 chiefs = ["rougier", "khinsen"]
-editors = ["otizonaizit", "pdebuyl", "emmanuelle", "ctb", "ThomasA", "tpoisot",
+editors = ["otizonaizit", "pdebuyl", "ctb", "ThomasA", "tpoisot",
+#          "emmanuelle"
            "karthik", "oliviaguest", "labarba"]
-reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn",
-             "yoavram", "FedericoV",  "heplesser", "apdavison",
+reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn", "yoavram",
+#             "FedericoV",
+             "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
-             "damiendr", "delsuc", "ogrisel", "soolijoo", "benureau", "rth",
+             "damiendr", "delsuc", "soolijoo", "benureau", "rth",
+#             "ogrisel",
              "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
              "aaronshifman"]
 replicators = ["gviejo", "gdetor", "MehdiKhamassi", "benoit-girard", "opetchey",
                "Vahidrostami", "jsta", "Fjanks", "ChristophMetzner", "vitay",
-               "andruhamax", "falex33", "aaronshifman", "RafaelNH"]
+#               "andruhamax",
+               "falex33", "aaronshifman", "RafaelNH"]
+
 
 # Adding names that are not part of the board
 board = {}
 board["Guillaume Viejo"] = ["gviejo", "---"]
-board["Andrei Maksimov"] = ["andruhamax", "---"]
+# board["Andrei Maksimov"] = ["andruhamax", "---"]
 board["Frédéric Alexandre"] = ["falex33", "0000-0002-6113-1878"]
 board["Rafael Neto Henriques"] = ["RafaelNH", "---"]
 board["Vahid Rostami"] = ["Vahidrostami", "---"]
 board["Frank Stollmeier"] = ["Fjanks", "0000-0003-4858-0895"]
 
+
 authors = list(set(editors+reviewers+replicators))
 fullnames = list(board.keys())
 replicators = replicators + ["rougier"]
-
-# authors = [ # "rougier", "khinsen",
-#            "otizonaizit", "pdebuyl", "emmanuelle", 
-#            "ctb", "ThomasA", "tpoisot", "karthik", "oliviaguest",
-#            "labarba", "MehdiKhamassi", "benoit-girard", "vitay",
-#            "gdetor", "dmcglinn", "yoavram", "FedericoV", "AdamRTomkins",
-#            "heplesser", "apdavison", "neuronalX", "piero-le-fou",
-#            "mstimberg", "rossant", "eroesch", "damiendr", "delsuc",
-#            "soolijoo", "benureau", "rth", "almarklein", "pietromarchesi",
-#            "aaronshifman", "anyaevostinar","ozancaglayan", "ogrisel",
-#            "jsta", "opetchey", "aaronshifman"]
-
 
 name_re = re.compile("""\* \[(?P<name>.+)\]\(https://github.com/(?P<handle>.+)\)""")
 orcid_re= re.compile("""  ORCID: \[(?P<orcid>.+)\]""")
@@ -57,41 +98,61 @@ with open("../ReScience.github.io/04-board.md") as file:
             board[name] = [handle, orcid]
             if handle in authors:
                 fullnames.append(name)
-                
-#names.extend(["Guillaume Viejo", "Andrei Maksimov", "Erwan Le Masson",
-#              "Rafael Neto Henriques", "Vahid Rostami"])
 
+# Sort authors (but rougier and hinsen)
 fullnames.sort(key=lambda s: s.split()[-1])
 fullnames = ["Nicolas P. Rougier", "Konrad Hinsen"] + fullnames
 
+
+tex_authors  = ""
+tex_affiliations  = ""
+indexed_affiliations = collections.OrderedDict()
+
+counter = 0
 for i,name in enumerate(fullnames):
     handle, orcid = board[name]
+    affiliation = affiliations[handle]
+
+    # Handle author with same affiliation
+    if affiliation not in indexed_affiliations.values():
+        counter += 1
+        index = counter
+        indexed_affiliations[index] = affiliation
+
+        tex_affiliations += "$^{%d}$" % index
+        tex_affiliations += affiliation
+        tex_affiliations +="\n%%\n"
+    else:
+        index = 1+list(indexed_affiliations.values()).index(affiliation)
 
     # Hack for sorting without taking care of unicode
+    #  (could have been done in a better way...)
     if name == "Ozan CÇağlayan":
         name = "Ozan Çağlayan"
     
-    print("\\textbf{%s}" % (name), end="")
-    print("$^{%d" % (i+1), end="")
+    tex_authors +=  "\\textbf{%s}" % (name)
+    tex_authors +=  "$^{%d" % (index)
     if handle in editors or handle in chiefs:
-        print("\dagger", end="")
+        tex_authors +=  "\dagger"
     if handle in reviewers:
-        print("\ddagger", end="")
+        tex_authors +=  "\ddagger"
     if handle in replicators:
-        print("\S", end="")
-    if handle == "rougier":
-        print("\star", end="")
-    print("}$", end="")
+        tex_authors +=  "\S"
+    if handle in ["rougier", "khinsen"]:
+        tex_authors += "\star"
+    tex_authors += "}$"
     
     if orcid != "---":
-        print ("\href{http://orcid.org/%s}{\includegraphics[width=8pt]{orcid}}"
-               % orcid, end="")
+        tex_authors += "\href{http://orcid.org/%s}{\includegraphics[width=8pt]{orcid}}" % orcid
     if i < len(fullnames)-1:
-        print(",\n%%")
+        tex_authors += ",\n%%\n"
     else:
-        print("\\\\")
+        tex_authors +="\\\\\n"
+tex_affiliations += "\par"
 
-#for i,name in enumerate(names):
-#    orcid = board[name][1]
-#    print("""$^{%d}$ \includegraphics[width=10pt]{iD-icon.pdf}
-#             \\href{http://orcid.org/%s}{orcid.org/%s} |"""" % (i+1, orcid, orcid))
+
+with open("authors.tex", "w") as file:
+    file.write(tex_authors)
+
+with open("affiliations.tex", "w") as file:
+    file.write(tex_affiliations)
