@@ -40,7 +40,7 @@
 @pietromarchesi: Pietro Marchesi
 @aaronshifman  : Aaron Shifman
 @anyaevostinar : Anya V.
-@ozancaglayan  : Ozan Çağlayan
+@ozancaglayan  : Ozan Caglayan
 @ogrisel       : Olivier Grisel
 @AdamRTomkins  : Adam Tomkins
 
