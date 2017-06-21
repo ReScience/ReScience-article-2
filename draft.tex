@@ -162,38 +162,29 @@
 
 
 \section*{Introduction}
-There is a replication crisis in Science. It has recently been highlighted in
-medicine \citep{ioannidis:2005}, psychology \citep{nosek:2015}, the
-political sciences \citep{janz:2015}, and even more recently in the biomedical
-sciences \citep{iqbal:2016}. The reasons for such non-reproducibility are as
-diverse as these domains are. In medicine, the {\em study power and bias, the
-number of other studies on the same question, and, importantly, the ratio of
-true to no relationships among the relationships probed in each scientific
-field} are important causes, as reported by \citep{ioannidis:2005}. In psychology,
-the infamous p-value seems to be the root of all evil, while in the biomedical
-sciences, \citep{iqbal:2016} identified a {\em lack of access to full datasets and
-detailed protocols for both clinical and non-clinical biomedical
-investigation}. Surprisingly enough, the computational sciences (in the broad
-sense) and computer sciences are no exception, even though they rely mostly on
-code and data that are believed to be not prone to the aforementioned
-problems.\\
+There is a replication crisis in Science. This crisis has been
+highlighted in fields as diverse as medicine \citep{ioannidis:2005},
+psychology \citep{nosek:2015}, the political sciences \citep{janz:2015},
+and recently in the biomedical sciences \citep{iqbal:2016}. The reasons
+behind such non-reproducibility are as diverse as the domains 
+themselves. In medicine, factors such as {\em study power and bias, the
+number of other studies on the same question, and importantly, the
+ratio of true to no relationships among the all relationships probed}
+have been highlighted as important causes \citep{ioannidis:2005}. 
+In psychology, non-reproducibility has been blamed on spurious p-value
+claims (p-hacking), while in the biomedical sciences, \citep{iqbal:2016}
+a {\em lack of access to full datasets and detailed protocols for both
+clinical and non-clinical biomedical investigation} is seen as a
+critical factor. Surprisingly, the computational sciences (in the broad
+sense) and computer sciences (in the strict sense) are no exception
+despite the fact that they rely heavily on code and data that should
+make them immune to the aforementioned problems.\\
 
-When \citep{collberg:2014, collberg:2015} decided to measure the
-extent of the problem precisely, they investigated the availability of code and data,
-and {\em the extent to which this code would actually build with reasonable
-  effort}. The results were dramatic: of the 515 potentially reproducible
-papers (out of 613) targeted by the study, the authors managed to ultimately run
-only 102, i.e. less than 20\%. It is to be underlined that the authors only
-investigated the possibility to run the code. They did not check for the
-correctness of the code (does the code actually implement what is advertised
-in the paper), nor the replicability of the results (does the run lead to the
-same results as in the paper).  \citep{topalidou:2015a} encountered the same
-problem when they tried to replicate a model from the computational
-neuroscience literature: source code was not part of the supplementary section
-of the paper and no link or repository was provided in the main text. When they
-finally got their hands on the code, after contacting the corresponding
-author, it was only to realize that it could not be compiled and was mostly
-unusable.\\
+When \citep{collberg:2014, collberg:2015} decided to measure the extent of the problem
+precisely, they investigated the availability of code and data as well as {\em the extent to which this code would actually build with reasonable
+  effort}. The results were dramatic: of the 515 (out of 613) potentially reproducible
+papers targeted by the study, the authors managed to ultimately run
+only 102 (i.e. less than 20\%). These low numbers reflect only the authors success at running the code. They did not check for correctness of the code (does the code actually implement what is advertised in the paper), nor the replicability of the results (does the run lead to the same results as in the paper). One example of this problem can be found in \citet{topalidou:2015a} where they tried to replicate a model from the computational neuroscience literature. Source code was not included in the supplementary section of the paper and no link to a repository was provided in the main text. When they obtained the code from the corresponding author, they found that it could not be compiled and would be difficult to repurpose.\\
 
 Confronted with this problem, a small but growing number of journals and
 publishers have decided to react and have adopted explicit data and software
@@ -204,17 +195,16 @@ on \href{http://journals.plos.org/plosone/s/data-availability}{Data Availability
 or the
 \href{https://elifesciences.org/elife-news/inside-elife-forking-software-used-elife-papers-github}{recent
   annoucement} by eLife on forking software used in eLife papers to GitHub.
-Such policies will ensure access to code and data in a well-defined format
+Such policies help to ensure access to code and data in a well-defined format
 \citep{perkel:2016} but this will not guarantee reproducilbility, nor
 correctness. At the educational level, things have started to change with a
 growing literature on best practices for making code reproducible
 \citep{sandve:2013, crook:2013, wilson:2014, halchenko:2015, janz:2015,
-  hinsen:2015}. Original initiatives such as Software and Data Carpentry
+  hinsen:2015}. Related initiatives such as Software and Data Carpentry
 \citep{wilson:2016} are worth mentioning since their goal is {\em to make
   scientists more productive, and their work more reliable, by teaching them
-  basic computing skills}. Obviously, such best practices could be applied as well to already published research software or code, provided the original
-authors are willing to take on the challenge of re-implementing their own
-software for the sake of better science. This is unlikely since, unfortunately, the
+  basic computing skills}. Such best practices could be applied to already published research software or code as well, provided the original authors are willing to take on the challenge of 
+  re-implementing their own software for the sake of better science. Unfortunately, this is unlikely since the
 incentives for doing such time-consuming work are low or nonexistent.
 Furthermore, if the original authors made mistakes in their original
 implementation, chances are that they will reproduce the same mistakes again (just an educated guess, we have no data supporting this
@@ -231,15 +221,15 @@ assertion).\\
 
 \section*{Replication and reproduction}
 \label{sec:replication-reproduction}
-With the increasing recognition of the replication crisis as a problem
-for scientific research, it has become a major subject of debate, but
-unfortunately no common terminology has emerged so far. One reason for
+While recognition of the replication crisis as a problem
+for scientific research has increased over time, unfortunately no 
+common terminology has emerged so far. One reason for
 the diverse use of terms is that each field of research has its own
-specific technical and social obstacles on the road to published
+specific technical and social obstacles on the road to publishing
 results and findings that can be verified by other scientists. Here we
 briefly summarize the obstacles that arise from the use of computers
 and software in scientific research, and introduce the terminology we
-will use in the rest of this article.\\
+will use in the rest of this article:\\
 
 \textit{Reproducing} the result of a computation means running the
 same software on the same input data and obtaining the same results.
@@ -378,7 +368,7 @@ M.Sc. students every year, as projects. In all these cases, we are confronted
 with incomplete or inaccurate model descriptions, as well as with the impossibility
 to obtain the original results. Contacting the original authors sometimes
 solves the problem, but not so often (because of the {\em dog ate my hard
-  drive} syndrom). We thus accumulate knowledge, internal to the lab, about
+  drive} syndrome). We thus accumulate knowledge, internal to the lab, about
 which model works and which doesn't, and how a given model has to be parameterized
 to really work. Without any place to publish it, this knowledge is
 wasted. Publishing it in ReScience, opening the discussion publicly, will be a
@@ -612,7 +602,7 @@ reply within reasonable delays. In addition, the editors occasionally
 answer questions by authors and reviewers about the ReScience
 publishing process.
 
-The possibility to imply participants beyond the traditional group of
+The possibility to imploy participants beyond the traditional group of
 authors, editors, and reviewers is particularly interesting in the
 case of ReScience, because it can be helpful to solicit input from the
 authors of the original study that is being replicated. For example,
@@ -675,8 +665,8 @@ code and data, with a Digital Object Identifier (DOI) providing a
 permanent reference. The \href{https://zenodo.org/}{Zenodo} platform
 allows straightforward archiving of snapshots of a repository hosted
 on GitHub, and issues a DOI for the archive. This leaves the task
-of producing a PDF version of the article, which is currently assumed
-by the editor handling the submission, in order to ease the technical
+of producing a PDF version of the article, which is currently handled
+by the managing editor of the submission, in order to ease the technical
 burden on our authors.
 
 A minor inconvenience of the GitHub platform is its implementation of
@@ -777,15 +767,15 @@ replication could be performed \textit{prior} to the publication of
 the original article. This would strongly reinforce a claim because a
 successful and independent replication would be available right from
 the start. As illustrated in figure \ref{fig:coscience}, this would
-require for a group A to contact a group B and send them a draft of
+require group A to contact group B and send them a draft of
 their original work (the one that would be normally submitted to a
 journal) such that group B could perform a replication and confirm or
-infirm the results. In case of confirmation, a certified article could
+refute the results. In case of confirmation, a certified article could
 be later published with both groups as authors (each group being
 identified according to their respective roles). However, if the
 replication fails and the original work cannot be fixed, this would
 prevent publication. This model would improve the quality of
-computational research and also slow down considerably the rapid pace
+computational research and also considerably slow down the rapid pace
 of publication we are observing today. Unfortunately, such a scenario
 seems highly improbable today. The pressure to publish is so strong
 and the incentive for doing replication so low that it would most
