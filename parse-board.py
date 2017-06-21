@@ -71,7 +71,6 @@ board["Guillaume Viejo"] = ["gviejo", "---"]
 # board["Andrei Maksimov"] = ["andruhamax", "---"]
 board["Frédéric Alexandre"] = ["falex33", "0000-0002-6113-1878"]
 board["Rafael Neto Henriques"] = ["RafaelNH", "---"]
-board["Vahid Rostami"] = ["Vahidrostami", "---"]
 board["Frank Stollmeier"] = ["Fjanks", "0000-0003-4858-0895"]
 
 
