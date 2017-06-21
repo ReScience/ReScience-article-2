@@ -89,8 +89,6 @@ with open("../ReScience.github.io/04-board.md") as file:
         if match:
             name  = match.group("name")
             handle = match.group("handle")
-            # Hack for sorting without taking care of unicode
-            if name == "Ozan Çağlayan": name = "Ozan CÇağlayan"
         match = orcid_re.match(line)
         if match:
             orcid = match.group("orcid")
@@ -124,11 +122,6 @@ for i,name in enumerate(fullnames):
     else:
         index = 1+list(indexed_affiliations.values()).index(affiliation)
 
-    # Hack for sorting without taking care of unicode
-    #  (could have been done in a better way...)
-    if name == "Ozan CÇağlayan":
-        name = "Ozan Çağlayan"
-    
     tex_authors +=  "\\textbf{%s}" % (name)
     tex_authors +=  "$^{%d" % (index)
     if handle in editors or handle in chiefs:
