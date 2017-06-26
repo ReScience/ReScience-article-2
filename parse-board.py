@@ -44,6 +44,7 @@ affiliations = {
     "tpoisot" : "Département de Sciences Biologiques, Université de Montréal, Montréal, Canada",
     "ctb":  "Department of Population Health and Reproduction, University of California Davis, Davis, CA, USA",
     "opetchey" : "Department of Evolutionary Biology and Environmental Studies, University of Zurich, Switzerland",
+    "FedericoV" : "Amazon, Seattle, USA"
 }
 
 # Commented names have declined or not answered yet
@@ -51,9 +52,8 @@ chiefs = ["rougier", "khinsen"]
 editors = ["otizonaizit", "pdebuyl", "ctb", "ThomasA", "tpoisot",
 #          "emmanuelle"
            "karthik", "oliviaguest", "labarba"]
-reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn", "yoavram",
-#             "FedericoV",
-             "heplesser", "apdavison",
+reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn",
+             "yoavram",  "FedericoV", "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
              "damiendr", "delsuc", "soolijoo", "benureau", "rth",
 #             "ogrisel",
