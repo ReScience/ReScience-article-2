@@ -179,8 +179,8 @@ critical factor.
 The same remarks were recently issued for chemistry \citep{coudert:2017}.
 Surprisingly, the computational sciences (in the broad
 sense) and computer sciences (in the strict sense) are no exception \citep{donoho:2009}
-despite the fact they rely heavily on code and data, which should
-make them immune to the aforementioned problems.\\
+despite the fact they rely on code and data rather than on experimental observations,
+ which should make them immune to the aforementioned problems.\\
 
 When \citep{collberg:2014, collberg:2015} decided to measure the extent of the problem
 precisely, they investigated the availability of code and data as well as {\em the extent to which this code would actually build with reasonable
@@ -189,16 +189,16 @@ papers targeted by the study, the authors managed to ultimately run
 only 102 (less than 20\%).
 These low numbers only reflect the authors' success at running the code.
 They did not check for correctness of the code (i.e., does the code actually implement what is advertised in the paper), nor the reproducibility of the results (does each run lead to the same results as in the paper).
-One example of this problem can be found in \citet{topalidou:2015a} where they tried to replicate a computational neuroscience model.
-Source code was not included in the supplementary section of the paper nor a link to a repository in the main text.
-When the replicators obtained code from the corresponding author, they found that it could not be compiled and would be difficult to repurpose.\\
+One example of this problem can be found in \citet{topalidou:2015a} where the authors tried to replicate results obtained from a computational neuroscience model.
+Source code was not available, neither as supplementary material to the paper nor in a public repository.
+When the replicators obtained the source code after contacting the corresponding author, they found that it could not be compiled and would be difficult to reuse for other purposes.\\
 
 Confronted with this problem, a small but growing number of journals and
-publishers have reacted by adopting explicit policies for data and software, for example the PLOS instructions on
+publishers have reacted by adopting explicit policies for data and software. Examples can be seen in the PLOS instructions on
 \href{http://journals.plos.org/plosone/s/materials-and-software-sharing}{Materials
   and Software Sharing} and
 on \href{http://journals.plos.org/plosone/s/data-availability}{Data Availability},
-and the
+and in the
 \href{https://elifesciences.org/elife-news/inside-elife-forking-software-used-elife-papers-github}{recent
   annoucement} by eLife on forking (creating a linked copy of) software used in eLife papers to GitHub.
 Such policies help to ensure access to code and data in a well-defined format
@@ -552,7 +552,7 @@ the reasons listed above. ReScience reviewers are scientists working
 in the same domain as the submitting authors, because familiarity with
 the field is a condition for judging if a replication is
 succesful. But this also means that our reviewers share a significant
-common background with the authors, and that background includes the
+common background with the authors, and that background often includes the
 software packages and programming languages adopted by their
 community.  In particular, if both authors and reviewers have
 essential libraries of their community installed on their computers,
@@ -754,7 +754,7 @@ developed in the community (see e.g.
 \href{https://github.com/OpenSourceBrain/osb-model-validation}{OSB-model-validation}). 
 An integration of such frameworks, which would greatly enhance the 
 verification and validation process, seems feasible for the existing software 
-development platform.
+development platforms.
 
 A logical next step is to fully embrace the technology designed for
 software development, which far better takes into account the
@@ -786,7 +786,7 @@ One immediate and legitimate question is to wonder to what extent a
 replication could be performed \textit{prior} to the publication of
 the original article. This would strongly reinforce a claim because a
 successful and independent replication would be available right from
-the start. As illustrated in figure \ref{fig:coscience}, this would
+the start. As illustrated in Figure~\ref{fig:coscience}, this would
 require group A to contact group B and send them a draft of
 their original work (the one that would be normally submitted to a
 journal) such that group B could perform a replication and confirm or
@@ -799,8 +799,10 @@ computational research and also considerably slow down the rapid pace
 of publication we are observing today. Unfortunately, such a scenario
 seems highly improbable today. The pressure to publish is so strong
 and the incentive for doing replication so low that it would most
-probably prevent such collaborative work. At this point, CoScience is
-just a utopia for tomorrow.
+probably prevent such collaborative work. However, we hope that the
+current replication crisis will lead to a change in attitude, with
+an emphasis on the quality rather than the quantity of scientific ouput,
+with CoScience becoming the gold-standard approach to quality assurance.
 
 % -> Computational vs Experimental: ReScience X (Etienne Roesch)
 
