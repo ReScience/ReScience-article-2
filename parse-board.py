@@ -18,7 +18,7 @@ affiliations = {
     "mstimberg" : "Sorbonne Universités, UPMC Univ Paris 06, INSERM, CNRS, Institut de la Vision, Paris, France",
     "heplesser" : "Faculty of Science and Technology, Norwegian University of Life Sciences, Aas, Norway -- Institute of Neuroscience and Medicine (INM-6), Jülich Research Centre, Jülich, Germany",
     "rth" : "Symerio, Palaiseau, France",
-    "delsuc" : "IGBMC, INSERM U964, CNRS UMR 7104, Université de Strasbourg, Illkirch, France",
+    "delsuc" : "Institut de Génétique et de Biologie Moléculaire et Cellulaire, INSERM U964, CNRS UMR 7104, Université de Strasbourg, Illkirch, France",
     "dmcglinn" : "Department of Biology, College of Charleston, Charleston, SC, USA",
     "labarba" : "Department of Mechanical and Aerospace Engineering, the George Washington University, Washington DC, USA",
     "pdebuyl" : "Instituut voor Theoretische Fysica, KU Leuven, Belgium -- PdB is a postdoctoral fellow of the Research Foundation -- Flanders (FWO)",
