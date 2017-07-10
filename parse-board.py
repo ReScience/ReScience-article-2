@@ -58,7 +58,7 @@ reviewers = ["benoit-girard", "MehdiKhamassi", "vitay", "gdetor", "dmcglinn",
              "yoavram",  "FedericoV", "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
              "damiendr", "delsuc", "soolijoo", "benureau", "rth", "KamilSJaron",
-             "ChristophMetzner", "TiinaManninen",
+             "TiinaManninen", "ChristophMetzner",
 #             "ogrisel",
              "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
              "aaronshifman"]
