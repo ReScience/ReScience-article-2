@@ -45,7 +45,8 @@ affiliations = {
     "opetchey" : "Department of Evolutionary Biology and Environmental Studies, University of Zurich, Switzerland",
     "FedericoV" : "Amazon, Seattle, USA",
     "akdiem" : "Computational Engineering and Design, Faculty of Engineering and the Environment, University of Southampton, UK",
-    "KamilSJaron" : "Department of Ecology and Evolution, University of Lausanne, Lausanne, Switzerland"
+    "KamilSJaron" : "Department of Ecology and Evolution, University of Lausanne, Lausanne, Switzerland",
+    "TiinaManninen" : "BioMediTech Institute and Faculty of Biomedical Sciences and Engineering, Tampere University of Technology, Tampere, Finland"
 }
 
 # Commented names have declined or not answered yet
@@ -57,6 +58,7 @@ reviewers = ["benoit-girard", "MehdiKhamassi", "vitay", "gdetor", "dmcglinn",
              "yoavram",  "FedericoV", "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
              "damiendr", "delsuc", "soolijoo", "benureau", "rth", "KamilSJaron",
+             "TiinaManninen",
 #             "ogrisel",
              "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
              "aaronshifman"]
