@@ -5,7 +5,7 @@ affiliations = {
     "eroesch" : "Centre for Integrative Neuroscience, School of Psychology, University of Reading, UK",
     "ThomasA" : "Department of Electronic Systems, Faculty of Engineering and Science, Aalborg University, Denmark",
     "ChristophMetzner" : "Centre for Computer Science and Informatics Research, University of Hertfordshire, UK",
-    "apdavison" : "Unité de Neurosciences, Information et Complexité, Centre National de la Recherche Scientifique, Gif-sur-Yvette, France",
+    "apdavison" : "Unité de Neurosciences, Information et Complexité, CNRS FRE 3693, Gif sur Yvette, France",
     "MehdiKhamassi":  "Institut des Systèmes Intelligent et de Robotique, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",
     "benoit-girard" : "Institut des Systèmes Intelligent et de Robotique, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",    
     "Vahidrostami": "Institute of Neuroscience \\& Medicine (INM-6) and Institute for Advanced Simulation (IAS-6) -- JARA-Brain Institute I (INM-10), Jülich Research Center, Jülich, Germany",
@@ -90,7 +90,7 @@ with open("/Users/rougier/Development/Public/ReScience/ReScience.github.io/04-bo
         if match:
             name  = match.group("name")
             handle = match.group("handle")
-            print(name, handle)
+#            print(name, handle)
         match = orcid_re.match(line)
         if match:
             orcid = match.group("orcid")
