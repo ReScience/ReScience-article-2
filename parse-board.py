@@ -45,6 +45,7 @@ affiliations = {
     "opetchey" : "Department of Evolutionary Biology and Environmental Studies, University of Zurich, Switzerland",
     "FedericoV" : "Amazon, Seattle, USA",
     "akdiem" : "Computational Engineering and Design, Faculty of Engineering and the Environment, University of Southampton, UK",
+    "KamilSJaron" : "Department of Ecology and Evolution, University of Lausanne, Lausanne, Switzerland"
 }
 
 # Commented names have declined or not answered yet
@@ -52,10 +53,10 @@ chiefs = ["rougier", "khinsen"]
 editors = ["otizonaizit", "pdebuyl", "ctb", "ThomasA", "tpoisot",
 #          "emmanuelle"
            "benoit-girard", "karthik", "oliviaguest", "labarba"]
-reviewers = ["MehdiKhamassi", "vitay", "gdetor", "dmcglinn",
+reviewers = ["benoit-girard", "MehdiKhamassi", "vitay", "gdetor", "dmcglinn",
              "yoavram",  "FedericoV", "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
-             "damiendr", "delsuc", "soolijoo", "benureau", "rth",
+             "damiendr", "delsuc", "soolijoo", "benureau", "rth", "KamilSJaron",
 #             "ogrisel",
              "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
              "aaronshifman"]
@@ -89,6 +90,7 @@ with open("/Users/rougier/Development/Public/ReScience/ReScience.github.io/04-bo
         if match:
             name  = match.group("name")
             handle = match.group("handle")
+            print(name, handle)
         match = orcid_re.match(line)
         if match:
             orcid = match.group("orcid")
