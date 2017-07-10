@@ -55,7 +55,7 @@ editors = ["otizonaizit", "pdebuyl", "ctb", "ThomasA", "tpoisot",
 reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn",
              "yoavram",  "FedericoV", "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
-             "damiendr", "delsuc", "soolijoo", "benureau", "rth",
+             "damiendr", "delsuc", "soolijoo", "benureau", "rth","ChristophMetzner"
 #             "ogrisel",
              "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
              "aaronshifman"]
