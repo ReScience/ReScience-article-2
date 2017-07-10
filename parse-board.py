@@ -5,10 +5,9 @@ affiliations = {
     "eroesch" : "Centre for Integrative Neuroscience, School of Psychology, University of Reading, UK",
     "ThomasA" : "Department of Electronic Systems, Faculty of Engineering and Science, Aalborg University, Denmark",
     "ChristophMetzner" : "Centre for Computer Science and Informatics Research, University of Hertfordshire, UK",
-    "apdavison" : "Unité de Neurosciences, Information et Complexité, Centre National de la Recherche Scientifique, Gif-sur-Yvette, France",
-    "MehdiKhamassi":  "Institute of Intelligent Systems and Robotics, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",
-    "benoit-girard" : "Institute of Intelligent Systems and Robotics, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",
-    
+    "apdavison" : "Unité de Neurosciences, Information et Complexité, CNRS FRE 3693, Gif sur Yvette, France",
+    "MehdiKhamassi":  "Institut des Systèmes Intelligent et de Robotique, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",
+    "benoit-girard" : "Institut des Systèmes Intelligent et de Robotique, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France",    
     "Vahidrostami": "Institute of Neuroscience \\& Medicine (INM-6) and Institute for Advanced Simulation (IAS-6) -- JARA-Brain Institute I (INM-10), Jülich Research Center, Jülich, Germany",
     "neuronalX" : "INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France",
     "pietromarchesi" : "Swammerdam Institute for Life Sciences, Center for Neuroscience, Faculty of Science, University of Amsterdam, Amsterdam, the Netherlands",
@@ -44,24 +43,28 @@ affiliations = {
     "tpoisot" : "Département de Sciences Biologiques, Université de Montréal, Montréal, Canada",
     "ctb":  "Department of Population Health and Reproduction, University of California Davis, Davis, CA, USA",
     "opetchey" : "Department of Evolutionary Biology and Environmental Studies, University of Zurich, Switzerland",
-    "FedericoV" : "Amazon, Seattle, USA"
+    "FedericoV" : "Amazon, Seattle, USA",
+    "akdiem" : "Computational Engineering and Design, Faculty of Engineering and the Environment, University of Southampton, UK",
+    "KamilSJaron" : "Department of Ecology and Evolution, University of Lausanne, Lausanne, Switzerland",
+    "TiinaManninen" : "BioMediTech Institute and Faculty of Biomedical Sciences and Engineering, Tampere University of Technology, Tampere, Finland"
 }
 
 # Commented names have declined or not answered yet
 chiefs = ["rougier", "khinsen"]
 editors = ["otizonaizit", "pdebuyl", "ctb", "ThomasA", "tpoisot",
 #          "emmanuelle"
-           "karthik", "oliviaguest", "labarba"]
-reviewers = ["MehdiKhamassi", "benoit-girard", "vitay", "gdetor", "dmcglinn",
+           "benoit-girard", "karthik", "oliviaguest", "labarba"]
+reviewers = ["benoit-girard", "MehdiKhamassi", "vitay", "gdetor", "dmcglinn",
              "yoavram",  "FedericoV", "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
-             "damiendr", "delsuc", "soolijoo", "benureau", "rth","ChristophMetzner"
+             "damiendr", "delsuc", "soolijoo", "benureau", "rth", "KamilSJaron",
+             "ChristophMetzner", "TiinaManninen",
 #             "ogrisel",
              "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
              "aaronshifman"]
 replicators = ["gviejo", "gdetor", "MehdiKhamassi", "benoit-girard", "opetchey",
                "Vahidrostami", "jsta", "Fjanks", "ChristophMetzner", "vitay",
-#               "andruhamax",
+               "akdiem", # "andruhamax",
                "falex33", "aaronshifman", "RafaelNH"]
 
 
@@ -72,7 +75,7 @@ board["Guillaume Viejo"] = ["gviejo", "---"]
 board["Frédéric Alexandre"] = ["falex33", "0000-0002-6113-1878"]
 board["Rafael Neto Henriques"] = ["RafaelNH", "---"]
 board["Frank Stollmeier"] = ["Fjanks", "0000-0003-4858-0895"]
-
+board["Alexandra K. Diem"] = ["akdiem", "0000-0003-1719-1942"]
 
 authors = list(set(editors+reviewers+replicators))
 fullnames = list(board.keys())
@@ -83,12 +86,13 @@ orcid_re= re.compile("""  ORCID: \[(?P<orcid>.+)\]""")
 handle_re = re.compile("""""")
 
 # names = []
-with open("../ReScience.github.io/04-board.md") as file:
+with open("/Users/rougier/Development/Public/ReScience/ReScience.github.io/04-board.md") as file:
     for line in file.readlines():
         match = name_re.match(line)
         if match:
             name  = match.group("name")
             handle = match.group("handle")
+#            print(name, handle)
         match = orcid_re.match(line)
         if match:
             orcid = match.group("orcid")

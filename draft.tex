@@ -126,8 +126,8 @@
     }
 }
 
-\title{Long-Term Reproducibility through Replication:\\
-       the ReScience Initiative}
+\title{Sustainable computational science:\\
+       the ReScience initiative}
 \author{%
   \begin{small}
     \input{authors.tex}
@@ -172,37 +172,35 @@ number of other studies on the same question, and importantly, the
 ratio of true to no relationships among the all relationships probed}
 have been highlighted as important causes \citep{ioannidis:2005}. 
 In psychology, non-replicability has been blamed on spurious p-values (p-hacking),
-while in the biomedical sciences, \citep{iqbal:2016}
+while in the biomedical sciences \citep{iqbal:2016},
 a {\em lack of access to full datasets and detailed protocols for both
 clinical and non-clinical biomedical investigation} is seen as a
 critical factor.
 The same remarks were recently issued for chemistry \citep{coudert:2017}.
 Surprisingly, the computational sciences (in the broad
-sense) and computer sciences (in the strict sense) are no exception \citep{donoho:2009}
-despite the fact they rely heavily on code and data, which should
-make them immune to the aforementioned problems.\\
+sense) and computer sciences (in the strict sense) are no exception \citep{donoho:2009,Manninen:2017} despite the fact they rely on code and data rather than on experimental observations, which should make them immune to the aforementioned problems.\\
 
-When \citep{collberg:2014, collberg:2015} decided to measure the extent of the problem
+When Collberg and colleagues \citep{collberg:2014, collberg:2015} decided to measure the extent of the problem
 precisely, they investigated the availability of code and data as well as {\em the extent to which this code would actually build with reasonable
   effort}. The results were dramatic: of the 515 (out of 613) potentially reproducible
 papers targeted by the study, the authors managed to ultimately run
 only 102 (less than 20\%).
 These low numbers only reflect the authors' success at running the code.
 They did not check for correctness of the code (i.e., does the code actually implement what is advertised in the paper), nor the reproducibility of the results (does each run lead to the same results as in the paper).
-One example of this problem can be found in \citet{topalidou:2015a} where they tried to replicate a computational neuroscience model.
-Source code was not included in the supplementary section of the paper nor a link to a repository in the main text.
-When the replicators obtained code from the corresponding author, they found that it could not be compiled and would be difficult to repurpose.\\
+One example of this problem can be found in \citet{topalidou:2015a}, in which the authors tried to replicate results obtained from a computational neuroscience model.
+Source code was not available, neither as supplementary material to the paper nor in a public repository.
+When the replicators obtained the source code after contacting the corresponding author, they found that it could not be compiled and would be difficult to reuse for other purposes.\\
 
 Confronted with this problem, a small but growing number of journals and
-publishers have reacted by adopting explicit policies for data and software, for example the PLOS instructions on
+publishers have reacted by adopting explicit policies for data and software. Examples can be seen in the PLOS instructions on
 \href{http://journals.plos.org/plosone/s/materials-and-software-sharing}{Materials
   and Software Sharing} and
 on \href{http://journals.plos.org/plosone/s/data-availability}{Data Availability},
-and the
+and in the
 \href{https://elifesciences.org/elife-news/inside-elife-forking-software-used-elife-papers-github}{recent
   annoucement} by eLife on forking (creating a linked copy of) software used in eLife papers to GitHub.
 Such policies help to ensure access to code and data in a well-defined format
-\citep{perkel:2016} but this will not guarantee reproducilbility nor
+\citep{perkel:2016} but this will not guarantee reproducibility nor
 correctness.
 At the educational and methodological levels, things have started to change with a
 growing literature on best practices for making computations reproducible
@@ -216,7 +214,8 @@ re-implementing their software for the sake of better science.
 Unfortunately, this is unlikely since the
 incentives for doing such time-consuming work are low or nonexistent.
 Furthermore, if the original authors made mistakes in their original
-implementation, chances are that they will reproduce their mistakes.\\
+implementation, it seems likely that they will reproduce their mistakes
+in any re-implementation.\\
 % (just an educated guess, we have no data supporting this assertion)
 %% At this point, the question is what do we do? Do we have to declare
 %% the research to be lost once and for all because the associated software or
@@ -237,7 +236,9 @@ specific technical and social obstacles on the road to publishing
 results and findings that can be verified by other scientists. Here we
 briefly summarize the obstacles that arise from the use of computers
 and software in scientific research, and introduce the terminology we
-will use in the rest of this article:\\
+will use in the rest of this article. We note, however, that there is
+some disagreement about this particular choice of terminology even
+among the authors of this article. \\
 
 \textit{Reproducing} the result of a computation means running the
 same software on the same input data and obtaining the same results.
@@ -251,7 +252,9 @@ In theory, computation is a deterministic process and exact
 reproduction should therefore be trivial. In reality, it is very
 difficult to achieve because of the complexity of today's software
 stacks and the tediousness of recording all interactions between a
-scientist and a computer.  \citeauthor{Mesnard:2016} explain in
+scientist and a computer 
+\citep[although a number of recent tools have attempted to automate such recording, e.g.][]{guo:2011, davison:2012, murta:2015}.
+\citeauthor{Mesnard:2016} explain
 \citep{Mesnard:2016} how difficult it can be to reproduce a two-year
 old computation even though all possible precautions were taken at the
 time to ensure reproducibility.  The most frequent obstacles are the
@@ -264,7 +267,7 @@ different interpretations by different compilers and runtime support
 systems. A large variety of research practices and support tools have
 been developed recently to facilitate reproducible computations. For a
 collection of recipes that have proven useful, see
-\citep{kitzes:2017}.
+\citet{kitzes:2017}.
 
 Publishing a reproducible computational result implies publishing all
 the software and all the input data, or references to previously
@@ -289,7 +292,7 @@ it were demonstrably correct in one specific environment. Ultimately
 it is not the software that is of interest for science, but the models
 and methods that it implements. The software is merely a vehicle to
 perform computations based on these models and methods. If results
-depend on hard to control implementation details of the software,
+depend on hard-to-control implementation details of the software,
 their relation to the underlying models and methods becomes unclear
 and unreliable.\\
 
@@ -310,11 +313,11 @@ the models and methods that were meant to be applied, nor that the
 descriptions of these models and methods are correct and clear. A
 successful replication shows that two teams have produced independent
 implementations that generate equivalent results, which makes serious
-mistakes in either software unlikely. Moreover, it shows that the
+mistakes in either implementation unlikely. Moreover, it shows that the
 second team was able to understand the description provided by the
 first team.
 
-Replication can be attempted both for reproducible and for
+Replication can be attempted for both reproducible and
 non-reproducible results. However, when an attempt to replicate
 non-reproducible work fails, yielding results too different to be
 considered equivalent, it can be very difficult to identify the cause
@@ -328,14 +331,14 @@ reproducible replication of reproducible original work.
 \section*{The ReScience initiative}
 
 Performing a replication is a daunting task that is traditionally not well
-rewarded. Nevertheless, some people are actually willing to replicate
+rewarded. Nevertheless, some people are willing to replicate
 computational research. The motivations for doing so are very diverse (see Box 1). Students may want to familiarize themselves with
 a specific scientific domain, and acquire relevant practical experience by replicating important published work. Senior researchers may critically
 need a specific piece of code for a research project and therefore re-implement a published computational method. If these people write a brand new
-open source implementation of already published research, chances are that this new
-implementation may be of interest for other people as well, including
+open source implementation of already published research, it is likely that this new
+implementation will be of interest for other people as well, including
 the original authors. The question is where to publish such a replication. To the
-best of our knowledge, no major journal accepts publishing replications in computational science. This has been the main motivation for the
+best of our knowledge, no major journal accepts replications in computational science for publication. This was the main motivation for the
 creation of the ReScience journal (\href{https://rescience.github.io}{rescience.github.io}) by Konrad Hinsen and Nicolas P. Rougier in September 2015.\\
 
 \begin{tcolorbox}[breakable, pad at break*=1mm,
@@ -384,7 +387,7 @@ progress for all of us. \par
 \end{footnotesize}
 \end{tcolorbox}
 
-ReScience is an openly peer-reviewed journal that targets computational research
+ReScience is an openly-peer-reviewed journal that targets computational research
 and encourages the explicit replication of already published research. In order
 to provide the largest possible benefit to the scientific community, replications are
 required to be reproducible and open-source. In less than two years of existence, 12
@@ -396,26 +399,25 @@ editorial board covers a wide range of computational sciences (see
 \url{http://rescience.github.io/board/}) and more than 70 volunteers have registered to be reviewers. The scientific domains of published work
 are computational neuroscience, neuroimaging, computational ecology and
 computer graphics, with a majority in computational neuroscience. There is a
-strong bias towards successful replication (100\%) and experience has
+strong bias towards successful replication (100\%); experience has
 taught us that researchers are reluctant to publish failed replications, even when they can prove that the original work is wrong. For young researchers,
 there is a social/professional risk in publishing articles that show
 results from a senior researcher to be wrong. Until we implement a
 certified anonymized submission process, this strong bias will most likely
 remain.\\
 
-One of the specificities of the ReScience journal is its publishing
+One of the specificities of the ReScience journal is a publishing
 chain that is radically different from any other traditional
-scientific journals since ReScience lives on GitHub, a platform
+scientific journal, since ReScience lives on GitHub, a platform
 originally designed for collaborative software development. A
 ReScience submission is treated very similarly to a contribution to an
 Open Source software project. One of the consequences is that the
 whole process, from submission via reviewing
 to publication, is open for anyone to see and even comment on.\\
 
-Each submission takes the form of a pull request that is first
-considered by a member of the editorial board, who may decide to
-reject the submission if it does not respect the formal publication
-criteria of ReScience. A submission must contain
+Each submission is considered by a member of the editorial board, who
+may decide to reject the submission if it does not respect the formal
+publication criteria of ReScience. A submission must contain
 \begin{itemize}
 \item a precise reference to the work being replicated,
 \item an explanation of why the authors think they have replicated the paper
@@ -425,8 +427,12 @@ criteria of ReScience. A submission must contain
 \item open-source code that produces the replication results,
 \item an explanation of this code for human readers.
 \end{itemize}
-A complete submission therefore consists of both code and an accompanying
-article. Partial replications that cover only some of the results in the
+A complete submission therefore consists of both computer code and an
+accompanying article, which are sent to ReScience in the form of a pull
+request (the process used on GitHub to submit a proposed modification
+to a software project).
+%
+Partial replications that cover only some of the results in the
 original work are acceptable, but must be justified.\\
 
 If the submission respects these criteria, the editor assigns it to
@@ -507,9 +513,9 @@ replication effort.
 \begin{figure}
   \includegraphics[width=1.0\columnwidth]{CoScience}
   \caption{\textbf{A} The ReScience publication chain starts from an
-    original research by authors A, published in a journal, in
+    original research article by authors A, published in a journal, in
     conference proceedings, or as a preprint. This article constitutes
-    the base material for authors B who attempt to replicate the work
+    the base material for authors B, who attempt to replicate the work
     based on its description. Success or failure to replicate is not a
     criterion for acceptance or rejection, even though failure to
     replicate requires more precaution to ensure this is not a
@@ -547,7 +553,7 @@ the reasons listed above. ReScience reviewers are scientists working
 in the same domain as the submitting authors, because familiarity with
 the field is a condition for judging if a replication is
 succesful. But this also means that our reviewers share a significant
-common background with the authors, and that background includes the
+common background with the authors, and that background often includes the
 software packages and programming languages adopted by their
 community.  In particular, if both authors and reviewers have
 essential libraries of their community installed on their computers,
@@ -556,7 +562,7 @@ the submitted code.  While solutions to this problem evidently exist
 (ReScience could, for example, request that authors make their
 software work on a standard computational environment supplied in the
 form of a virtual machine), they represent an additional effort to
-authors and therefore discourage from submitting replication work to
+authors and therefore discourage them from submitting replication work to
 ReScience.  Our goal is to develop a set of recommendations for
 authors that represent a workable compromise between reproducibility
 and implementation effort.\\
@@ -565,7 +571,7 @@ Another issue with reproducibility is that with today's computing
 technology, long-term reproducibility can only be achieved by imposing
 drastic constraints on languages and libraries that are not compatible
 with the requirements of research computing. This problem is nicely
-illustrated by \citep{Mesnard:2016} whose authors report trying to
+illustrated by \citet{Mesnard:2016} whose authors report trying to
 reproduce their own work performed two years earlier. Even though
 Barba's group is committed to reproducible research practices, they
 did not escape the many problems one can face when trying to re-run a
@@ -584,7 +590,7 @@ true long-term value of a replication is the accompanying article.\\
 
 The well-known weaknesses of the traditional anonymous peer-reviewing
 system used by most scientific journals have motivated many
-experiments with various alternative reviewing processes. The variant
+experiments with alternative reviewing processes. The variant
 adopted by ReScience is similar to the ones used by F1000Research or
 PeerJ, but is even more radically open: anyone can look at ReScience
 submissions and at the complete reviewing process, starting from the
@@ -610,29 +616,28 @@ reply within reasonable delays. In addition, the editors occasionally
 answer questions by authors and reviewers about the ReScience
 publishing process.
 
-The possibility to imploy participants beyond the traditional group of
+The possibility to involve participants beyond the traditional group of
 authors, editors, and reviewers is particularly interesting in the
 case of ReScience, because it can be helpful to solicit input from the
 authors of the original study that is being replicated. For example,
 in one recent case
 (\href{https://github.com/ReScience/ReScience-submission/pull/28}{\#28}),
-a reviewer suggested asking the author of the original work for a
+a reviewer suggested asking the author of the original work for
 permission to re-use an image. The author intervened in the review and
 granted permission.
 
 \subsection*{Publishing on the GitHub platform}
 
-\href{http://github.com/}{GitHub} is a commercial platform for
-collaborative software development based on the popular version
-control system \href{https://git-scm.com/}{git}. It offers unlimited
-free use to Open Source projects, defined as projects whose contents
-are accessible to everyone. All ReScience activities are organized
-around a few such Open Source projects hosted by GitHub. This is an
-unusual choice for a scientific journal, the only other journal hosted
-on GitHub being \href{http://joss.theoj.org/}{The Journal of Open
-Source Software}. In this section, we discuss the advantages and
-problems resulting from this choice, considering both technical and
-social issues.
+\href{http://github.com/}{GitHub} is a commercial platform for collaborative
+software development based on the popular version control system
+\href{https://git-scm.com/}{git}. It offers unlimited free use to Open Source
+projects, defined as projects whose contents are accessible to everyone. All
+ReScience activities are organized around a few such Open Source projects
+hosted by GitHub. This is an unusual choice for a scientific journal, the only
+other journal hosted on GitHub being The Journal of Open Source
+Software\citep{Smith:2017}. In this section, we discuss the advantages and
+problems resulting from this choice, considering both technical and social
+issues.
 
 There are clear differences between platforms for software
 development, such as GitHub, and platforms for scientific publishing,
@@ -649,15 +654,15 @@ develop a set of procedures that make it usable for scientific
 publishing.
 
 Our experience shows that the GitHub platform provides excellent
-support for reviewing process, which is not surprising given that the
+support for the reviewing process, which is not surprising given that the
 review of a scientific article containing code is not fundamentally
 different from the review of code with accompanying documentation.
-One potential issue for other journals envisaging to adopt this
-platform is the necessity for submitting authors to have a basic
-knowledge of the version control system git and of the techniques of
+One potential issue for other journals envisaging adoption of this
+platform is the necessity that submitting authors have a basic
+knowledge of the version control system Git and of the techniques of
 collaborative software development. Given the code-centric nature of
 ReScience, this has not been a major problem for us, and the minor
-ones could be resolved by our editors providing technical assistance
+issues have been resolved by our editors providing technical assistance
 to authors. It is of course possible that potential authors are
 completely discouraged from submitting to ReScience by their lack
 of the required technical competence, but so far nobody has
@@ -722,7 +727,7 @@ explicit or implicit threats of reducing future funding.
 
 Based on our experience with the ReScience initiative, we can engage
 in informed speculation about possible future evolutions in scientific
-publishing, in particular concerning replication work. We won't
+publishing, in particular concerning replication work. We will not
 discuss minor technical advances such as a better toolchain for
 producing PDF articles, but concentrate on long-term improvements in
 the technology of electronic publishing and, most of all, in the
@@ -744,12 +749,12 @@ experience has shown, it is far easier to graft publication onto a
 software development platform than to integrate software reviewing
 into a publishing platform. Furthermore, tools that will allow for the automated
 validation of computational models and the automated verification of correctness are being actively 
-developed in the community (see e.g. 
+developed in the community (see, for example, 
 \href{https://github.com/scidash/sciunit}{SciUnit} or 
 \href{https://github.com/OpenSourceBrain/osb-model-validation}{OSB-model-validation}). 
 An integration of such frameworks, which would greatly enhance the 
 verification and validation process, seems feasible for the existing software 
-development platform.
+development platforms.
 
 A logical next step is to fully embrace the technology designed for
 software development, which far better takes into account the
@@ -781,7 +786,7 @@ One immediate and legitimate question is to wonder to what extent a
 replication could be performed \textit{prior} to the publication of
 the original article. This would strongly reinforce a claim because a
 successful and independent replication would be available right from
-the start. As illustrated in figure \ref{fig:coscience}, this would
+the start. As illustrated in Figure~\ref{fig:coscience}, this would
 require group A to contact group B and send them a draft of
 their original work (the one that would be normally submitted to a
 journal) such that group B could perform a replication and confirm or
@@ -794,8 +799,10 @@ computational research and also considerably slow down the rapid pace
 of publication we are observing today. Unfortunately, such a scenario
 seems highly improbable today. The pressure to publish is so strong
 and the incentive for doing replication so low that it would most
-probably prevent such collaborative work. At this point, CoScience is
-just a utopia for tomorrow.
+probably prevent such collaborative work. However, we hope that the
+current replication crisis will lead to a change in attitude, with
+an emphasis on the quality rather than the quantity of scientific ouput,
+with CoScience becoming the gold-standard approach to quality assurance.
 
 % -> Computational vs Experimental: ReScience X (Etienne Roesch)
 
