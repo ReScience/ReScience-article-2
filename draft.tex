@@ -150,17 +150,47 @@
 \begin{document}
 
 \twocolumn[
-\maketitle
-\begin{small}
+  \maketitle
+  \vspace{5mm}
   \noindent
-  \textbf{} \par
+  \textbf{Abstract.}
+  If computer science offers a large set of tools for prototyping, writing,
+  running, testing, validating, sharing and replicating results, computational
+  science still lags behind. In the best case, authors may provide the sources
+  of their research as a compressed archive and feel confident their research
+  is replicable. But this is not exactly true. Buckheit \& Donoho 1995
+  explained almost 20 years ago that, an article about computational result is
+  advertising, not scholarship. The actual scholarship is the full software
+  environment, code and data that produced the result. The computational part
+  in computational sciences implies the use of computers, operating systems,
+  tools, frameworks, libraries and data. This leads to such a large number of
+  combinations (taking into account the version for each component) that the
+  chances to have the exact same configuration as one of your colleagues are
+  nearly zero. This draws consequences in our respective computational
+  approaches in order to make sure that computational research can be actually
+  and faithfully replicated.
+  %
+  ReScience is a peer-reviewed journal that targets computational research and
+  encourages the explicit replication of already published research, promoting
+  new and open-source implementations in order to ensure that the original
+  research is reproducible. To achieve this goal, the whole publishing chain is
+  radically different from other traditional scientific journals. ReScience
+  lives on GitHub where each new implementation of a computational study is
+  made available together with comments, explanations and tests. Each
+  submission takes the form of a pull request that is publicly reviewed and
+  tested in order to guarantee that any researcher can re-use it. ReScience is
+  open and collaborative by design: everything can be modified.\\
+  % \begin{small}
+  % \vspace{10mm}
+  
   \textbf{Keywords:} Open Science, Computational Science,
                      Reproducibility, Replicability, Journal, Publication
-\end{small}
-\vspace{10mm}
+  %\end{small}
+  %\vspace{10mm}
+  \vfill
 ]
 
-
+\clearpage
 \section*{Introduction}
 There is a replication crisis in Science. This crisis has been
 highlighted in fields as diverse as medicine \citep{ioannidis:2005},
@@ -331,15 +361,20 @@ reproducible replication of reproducible original work.
 \section*{The ReScience initiative}
 
 Performing a replication is a daunting task that is traditionally not well
-rewarded. Nevertheless, some people are willing to replicate
-computational research. The motivations for doing so are very diverse (see Box 1). Students may want to familiarize themselves with
-a specific scientific domain, and acquire relevant practical experience by replicating important published work. Senior researchers may critically
-need a specific piece of code for a research project and therefore re-implement a published computational method. If these people write a brand new
-open source implementation of already published research, it is likely that this new
-implementation will be of interest for other people as well, including
-the original authors. The question is where to publish such a replication. To the
-best of our knowledge, no major journal accepts replications in computational science for publication. This was the main motivation for the
-creation of the ReScience journal (\href{https://rescience.github.io}{rescience.github.io}) by Konrad Hinsen and Nicolas P. Rougier in September 2015.\\
+rewarded. Nevertheless, some people are willing to replicate computational
+research. The motivations for doing so are very diverse (see Box 1). Students
+may want to familiarize themselves with a specific scientific domain, and
+acquire relevant practical experience by replicating important published
+work. Senior researchers may critically need a specific piece of code for a
+research project and therefore re-implement a published computational
+method. If these people write a brand new open source implementation of already
+published research, it is likely that this new implementation will be of
+interest for other people as well, including the original authors. The question
+is where to publish such a replication. To the best of our knowledge, no major
+journal accepts replications in computational science for publication. This was
+the main motivation for the creation of the ReScience journal
+(\href{https://rescience.github.io}{rescience.github.io}) by Konrad Hinsen and
+Nicolas P. Rougier in September 2015.\\
 
 \begin{tcolorbox}[breakable, pad at break*=1mm,
                   colback=black!2.5, arc=0pt, outer arc=0pt, boxrule=.25pt]
@@ -421,7 +456,7 @@ publication criteria of ReScience. A submission must contain
 \begin{itemize}
 \item a precise reference to the work being replicated,
 \item an explanation of why the authors think they have replicated the paper
-      (same figures, same graphics, same behavior, etc.),
+  (same figures, same graphics, same behavior, etc.) or why they have failed.
 \item a description of any difficulties encountered during the
       replication,
 \item open-source code that produces the replication results,
@@ -445,14 +480,23 @@ through discussion. Since ReScience targets replication of already
 published work, the criteria of importance or novelty applied by most
 traditional journals are irrelevant.
 
-For a submission to be accepted, both reviewers must consider it
-reproducible and a valid replication of the original work. As we
-explained earlier, this means that the reviewers
+For a successful submission (i.e. partial or full replication) to be accepted,
+both reviewers must consider it reproducible and a valid replication of the
+original work. As we explained earlier, this means that the reviewers
 \begin{itemize}
 \item are able to run the proposed implementation on their computers,
 \item obtain the same results as indicated in the accompanying paper,
-\item consider these results sufficiently close to the ones reported in the original paper being replicated.
+\item consider these results sufficiently close to the ones reported in the
+  original paper being replicated.
 \end{itemize}
+
+For a failure to replicate submission to be accepted, we require extra steps.
+to be taken. In addition to scrutiny of the submission by reviewers and
+editors, we will try to contact the authors of the original research, and issue
+a challenge to the community to spot and report errors in the new implementation.
+If no errors are found, the submission will be accepted and the original
+research will be declared non-replicable.
+
 %
 % The review concentrates on how easy it would be for another researcher
 % to run the proposed implementation. This should be viewed in light of
