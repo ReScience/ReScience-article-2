@@ -52,30 +52,25 @@ affiliations = {
 # Commented names have declined or not answered yet
 chiefs = ["rougier", "khinsen"]
 editors = ["otizonaizit", "pdebuyl", "ctb", "ThomasA", "tpoisot",
-#          "emmanuelle"
            "benoit-girard", "karthik", "oliviaguest", "labarba"]
 reviewers = ["benoit-girard", "MehdiKhamassi", "vitay", "gdetor", "dmcglinn",
              "yoavram",  "FedericoV", "heplesser", "apdavison",
              "neuronalX", "piero-le-fou", "mstimberg", "rossant", "eroesch",
              "damiendr", "delsuc", "soolijoo", "benureau", "rth", "KamilSJaron",
-             "TiinaManninen", "ChristophMetzner",
-#             "ogrisel",
-             "almarklein", "pietromarchesi", "anyaevostinar","ozancaglayan",
-             "aaronshifman"]
+             "TiinaManninen", "ChristophMetzner", "almarklein", "pietromarchesi",
+             "anyaevostinar","ozancaglayan", "aaronshifman"]
 replicators = ["gviejo", "gdetor", "MehdiKhamassi", "benoit-girard", "opetchey",
                "Vahidrostami", "jsta", "Fjanks", "ChristophMetzner", "vitay",
-               "akdiem", # "andruhamax",
-               "falex33", "aaronshifman", "RafaelNH"]
+               "akdiem", "falex33", "aaronshifman", "RafaelNH"]
 
 
 # Adding names that are not part of the board
 board = {}
 board["Guillaume Viejo"] = ["gviejo", "---"]
-# board["Andrei Maksimov"] = ["andruhamax", "---"]
 board["Frédéric Alexandre"] = ["falex33", "0000-0002-6113-1878"]
 board["Rafael Neto Henriques"] = ["RafaelNH", "---"]
 board["Frank Stollmeier"] = ["Fjanks", "0000-0003-4858-0895"]
-board["Alexandra K. Diem"] = ["akdiem", "0000-0003-1719-1942"]
+# board["Alexandra K. Diem"] = ["akdiem", "0000-0003-1719-1942"]
 
 authors = list(set(editors+reviewers+replicators))
 fullnames = list(board.keys())
