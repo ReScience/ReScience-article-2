@@ -105,6 +105,7 @@ fullnames.sort(key=lambda s: s.split()[-1])
 fullnames = ["Nicolas P. Rougier", "Konrad Hinsen"] + fullnames
 
 
+txt_authors  = ""
 tex_authors  = ""
 tex_affiliations  = ""
 indexed_affiliations = collections.OrderedDict()
@@ -126,6 +127,7 @@ for i,name in enumerate(fullnames):
     else:
         index = 1+list(indexed_affiliations.values()).index(affiliation)
 
+    txt_authors += "%s; " % (name)
     tex_authors +=  "\\textbf{%s}" % (name)
     tex_authors +=  "$^{%d" % (index)
     if handle in editors or handle in chiefs:
@@ -152,3 +154,6 @@ with open("authors.tex", "w") as file:
 
 with open("affiliations.tex", "w") as file:
     file.write(tex_affiliations)
+
+with open("authors.txt", "w") as file:
+    file.write(txt_authors)
