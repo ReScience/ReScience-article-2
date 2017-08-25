@@ -46,6 +46,7 @@ collaborative software development.
 Considering the ever increasing importance of computational methods in
 all scientific disciplines, we believe that our approach to
 replication is of interest to a broad audience of researchers,
-and therefore to the readership of PNAS.
-
-
+and therefore to the readership of PNAS. Moreover, we feel that
+our initiative is fully in line with the National Academy's
+recent efforts to improve reproducibility and replicability
+in science.
