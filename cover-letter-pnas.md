@@ -6,9 +6,9 @@ We would like to bring to your attention the manuscript entitled
 
 and ask you to consider it for publication in PNAS.
 
-The article documents the first two years of ReScience, an online
+The article explains our motivation for launching ReScience, an online
 journal dedicated to publishing replication work in computational
-science. The author list contains everybody who has actively
+science, and reports on its first two years. The author list contains everybody who has actively
 contributed to this venture, in the role of author, reviewer, or
 editor.
 
@@ -24,15 +24,19 @@ the method and the results obtained with its help.
 Publishing the software is not a sufficient solution either. Much
 research software is hard to understand and hard to use. Moreover,
 it is very difficult to judge if it actually corresponds to the
-published method summary.
+published method summary. Finally, given today's state of the art,
+software ceases to work after a few years. Encoding scientific models
+in software is therefore not sustainable.
 
 The best technique we have today to validate computational methods is
-an independent reimplementation by another team, based on the
+an independent reimplementation by a different team, based only on the
 published method summary. If this independently developed software
 replicates the results of the original one, many mistakes commonly
 made in computational science can be excluded. The trust in the
 correctness of the results can be increased further by subjecting the
-independent reimplementation to peer review.
+independent reimplementation to peer review.  From the point of view
+of sustainability, the success of an independent reimplementation proves
+that the original method summary is correct and sufficient. 
 
 ReScience makes two important contributions that traditional
 scientific journals cannot offer. First, it provides a venue for
