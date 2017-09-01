@@ -1,16 +1,16 @@
-Dear Prof. Lenski,
+Dear PNAS editorial board,
 
-We would like to bring to your attention the manuscript entitled
+We would like to bring to your attention the attached manuscript entitled
 
     Sustainable computational science: the ReScience initiative
-
+    
 and ask you to consider it for publication in PNAS.
 
 The article explains our motivation for launching ReScience, an online
 journal dedicated to publishing replication work in computational
-science, and reports on its first two years. The author list contains everybody who has actively
-contributed to this venture, in the role of author, reviewer, or
-editor.
+science, and reports on its first two years. The author list contains
+everybody who has actively contributed to this venture, in the role of
+author, reviewer, or editor.
 
 ReScience aims to solve the problem of scientific models disappearing
 from the scientific literature. More and more scientific models take
@@ -54,3 +54,8 @@ and therefore to the readership of PNAS. Moreover, we feel that
 our initiative is fully in line with the National Academy's
 recent efforts to improve reproducibility and replicability
 in science.
+
+Signed,
+
+Dr. Konrad Hinsen
+for the authors.
