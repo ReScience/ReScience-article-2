@@ -1,160 +1,110 @@
-\documentclass[a4paper,10pt, twocolumn]{article}
-
-% Wider margins (compared to default)
-\usepackage[margin=2.0cm]{geometry}
-
-% For misc. computations
+\documentclass[fleqn,10pt,lineno]{peerj}
 \usepackage{calc}
 \usepackage{enumitem}
-
-% English support (typography and hyphenation)
-\usepackage[american]{babel}
-\usepackage{csquotes}
-
-% For math
 \usepackage{amsmath}
 
 % Unicode encoding
 \usepackage[utf8]{inputenc}
-
-% Color box
-\usepackage{tikz,lipsum,lmodern}
-\usepackage[most]{tcolorbox}
-
-% Better default font (Libertine and Inconsolata)
-\usepackage[ttscale=.875]{libertine}
-\usepackage[scaled=0.96]{zi4}
-
-%% \usepackage{mathspec}
-%% \setmainfont{Minion Pro Cond}
-%% \setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
-%% \setmathrm{Minion Pro}
-%% \setsansfont{MyriadPro-Cond}
-
-\usepackage{nicefrac}
-
-% Biber
-\usepackage[backend=biber,
-            style=apa,
-%            maxcitenames=3,
-%            uniquelist=false,
-%            maxbibnames=99,
-%            apabackref=false,
-            apamaxprtauth=99,
-            natbib=true]{biblatex}
-\DeclareLanguageMapping{american}{american-apa}
-
-
-
-% Graphics
 \usepackage{graphicx}
+\usepackage{hyperref}
+% \usepackage{biblatex}
+% \bibliography{draft}
 
-% Figure caption
-\usepackage[labelsep=period]{caption}
-\renewcommand{\captionfont}{\small\sffamily}
-\renewcommand{\captionlabelfont}{\small\sffamily\bfseries}
+\title{Sustainable computational science:\\the ReScience initiative}
+\author[1,$\dagger$,$\S$,$\star$]{Nicolas P. Rougier}
+\author[2,$\dagger$,$\star$]{Konrad Hinsen}
+\author[1,$\S$]{Frédéric Alexandre}
+\author[3,$\dagger$]{Thomas Arildsen}
+\author[4,$\dagger$]{Lorena Barba}
+\author[1,$\ddagger$]{Fabien C. Y. Benureau}
+\author[5,$\dagger$]{C. Titus Brown}
+\author[6,$\dagger$]{Pierre de Buyl}
+\author[7,$\ddagger$]{Ozan Caglayan}
+\author[8,$\ddagger$]{Andrew P. Davison}
+\author[9,$\ddagger$]{Marc André Delsuc}
+\author[10,$\ddagger$,$\S$]{Georgios Detorakis}
+\author[11,$\S$]{Alexandra K. Diem}
+\author[12,$\ddagger$]{Damien Drix}
+\author[13,$\ddagger$]{Pierre Enel}
+\author[14,$\dagger$,$\ddagger$,$\S$]{Benoît Girard}
+\author[15,$\dagger$]{Olivia Guest}
+\author[16,$\ddagger$]{Matt G. Hall}
+\author[17,$\S$]{Rafael Neto Henriques}
+\author[1,$\ddagger$]{Xavier Hinaut}
+\author[18,$\ddagger$]{Kamil S Jaron}
+\author[14,$\ddagger$,$\S$]{Mehdi Khamassi}
+\author[19,$\ddagger$]{Almar Klein}
+\author[20,$\ddagger$]{Tiina Manninen}
+\author[21,$\ddagger$]{Pietro Marchesi}
+\author[22,$\ddagger$]{Dan McGlinn}
+\author[23,$\ddagger$,$\S$]{Christoph Metzner}
+\author[24,$\S$]{Owen L. Petchey}
+\author[25,$\ddagger$]{Hans Ekkehard Plesser}
+\author[26,$\dagger$]{Timothée Poisot}
+\author[27,$\dagger$]{Karthik Ram}
+\author[28,$\ddagger$]{Yoav Ram}
+\author[29,$\ddagger$]{Etienne Roesch}
+\author[30,$\ddagger$]{Cyrille Rossant}
+\author[31,$\S$]{Vahid Rostami}
+\author[32,$\ddagger$,$\S$]{Aaron Shifman}
+\author[33,$\S$]{Joseph Stachelek}
+\author[34,$\ddagger$]{Marcel Stimberg}
+\author[35,$\S$]{Frank Stollmeier}
+\author[36,$\ddagger$]{Federico Vaggi}
+\author[37,$\S$]{Guillaume Viejo}
+\author[38,$\ddagger$,$\S$]{Julien Vitay}
+\author[39,$\ddagger$]{Anya Vostinar}
+\author[40,$\ddagger$]{Roman Yurchak}
+\author[41,$\dagger$]{Tiziano Zito}
+\affil[1]{INRIA Bordeaux Sud-Ouest Talence, France – Institut des Maladies Neurodégénératives, Université de Bordeaux, CNRS UMR 5293, Bordeaux, France – LaBRI, Université de Bordeaux, Bordeaux INP, CNRS UMR 5800, Talence, France}
+\affil[2]{Centre de Biophysique Moléculaire, CNRS UPR4301, Orléans, France -- Synchrotron SOLEIL, Division Expériences, Gif sur Yvette, France}
+\affil[3]{Department of Electronic Systems, Faculty of Engineering and Science, Aalborg University, Denmark}
+\affil[4]{Department of Mechanical and Aerospace Engineering, the George Washington University, Washington DC, USA}
+\affil[5]{Department of Population Health and Reproduction, University of California Davis, Davis, CA, USA}
+\affil[6]{Instituut voor Theoretische Fysica, KU Leuven, Belgium -- PdB is a postdoctoral fellow of the Research Foundation -- Flanders (FWO)}
+\affil[7]{Laboratoire d'Informatique de l'Université du Maine (LIUM), Le Mans, France}
+\affil[8]{Unité de Neurosciences, Information et Complexité, CNRS FRE 3693, Gif sur Yvette, France}
+\affil[9]{Institut de Génétique et de Biologie Moléculaire et Cellulaire, INSERM U964, CNRS UMR 7104, Université de Strasbourg, Illkirch, France}
+\affil[10]{Department of Cognitive Sciences, University of California Irvine, USA}
+\affil[11]{Computational Engineering and Design, Faculty of Engineering and the Environment, University of Southampton, UK}
+\affil[12]{Department of Computer Science, Humboldt-Universität zu Berlin}
+\affil[13]{Friedman Brain Institute, Icahn School of Medicine at Mount Sinai, NY, USA}
+\affil[14]{Institut des Systèmes Intelligent et de Robotique, Sorbonne Universités, UPMC Univ Paris 06, CNRS, Paris, France}
+\affil[15]{Experimental Psychology, University College London, UK}
+\affil[16]{UCL Great Ormond St Institute of Child Health. University College London, London, UK}
+\affil[17]{MRC Cognition and Brain Sciences Unit, Cambridge, UK}
+\affil[18]{Department of Ecology and Evolution, University of Lausanne, Lausanne, Switzerland}
+\affil[19]{Independent scholar, Enschede, The Netherlands}
+\affil[20]{BioMediTech Institute and Faculty of Biomedical Sciences and Engineering, Tampere University of Technology, Tampere, Finland}
+\affil[21]{Swammerdam Institute for Life Sciences, Center for Neuroscience, Faculty of Science, University of Amsterdam, Amsterdam, the Netherlands}
+\affil[22]{Department of Biology, College of Charleston, Charleston, SC, USA}
+\affil[23]{Centre for Computer Science and Informatics Research, University of Hertfordshire, UK}
+\affil[24]{Department of Evolutionary Biology and Environmental Studies, University of Zurich, Switzerland}
+\affil[25]{Faculty of Science and Technology, Norwegian University of Life Sciences, Aas, Norway -- Institute of Neuroscience and Medicine (INM-6), Jülich Research Centre, Jülich, Germany}
+\affil[26]{Département de Sciences Biologiques, Université de Montréal, Montréal, Canada}
+\affil[27]{Berkeley Institute for Data Science, University of California Berkeley, Berkeley, CA, USA}
+\affil[28]{Department of Biology, Stanford University, Stanford, CA, USA}
+\affil[29]{Centre for Integrative Neuroscience, School of Psychology, University of Reading, UK}
+\affil[30]{Institute of Neurology, University College London, UK}
+\affil[31]{Institute of Neuroscience \& Medicine (INM-6) and Institute for Advanced Simulation (IAS-6) -- JARA-Brain Institute I (INM-10), Jülich Research Center, Jülich, Germany}
+\affil[32]{Department of Biology, University of Ottawa, Ottawa, Ontario, Canada}
+\affil[33]{Department of Fisheries and Wildlife, Michigan State University, MI, USA}
+\affil[34]{Sorbonne Universités, UPMC Univ Paris 06, INSERM, CNRS, Institut de la Vision, Paris, France}
+\affil[35]{Network Dynamics, Max Planck Institute for Dynamics and Self-Organization, Germany}
+\affil[36]{Amazon, Seattle, USA}
+\affil[37]{Montreal Neurological Institute, McGill University, Montreal, Canada}
+\affil[38]{Professorship for Artificial Intelligence, Department of Computer Science, Chemnitz University of Technology, Chemnitz, Germany}
+\affil[39]{Department of Computer Science, Grinnell College, IA, USA}
+\affil[40]{Symerio, Palaiseau, France}
+\affil[41]{Neural Information Processing Group, University of Tübingen, Germany}
+\affil[$^{\star}$]{ReScience co-founder}
+\affil[$^{\dagger}$]{ReScience editor}
+\affil[$^{\ddagger}$]{ReScience reviewer}
+\affil[$^{\S}$]{ReScience author}
+\corrauthor[1]{Nicolas P. Rougier}{Nicolas.Rougier@inria.fr}
 
-% Hyperref
-\usepackage{xcolor}
-\definecolor{blendedblue}{rgb}{0.2, 0.2, 0.6}
-\definecolor{blendedred}{rgb}{0.8, 0.2, 0.2}
-\usepackage[bookmarks=true,
-            breaklinks=true,
-            pdfborder={0 0 0},
-            citecolor=blendedblue,
-            colorlinks=true,
-            linkcolor=blendedblue,
-            urlcolor=blendedblue,
-            citecolor=blendedblue,
-            linktocpage=false,
-            hyperindex=true,
-            linkbordercolor=white]{hyperref}
-\hypersetup{colorlinks=true}
 
-
-% Bibliography file
-\bibliography{draft.bib}
-
-% Headers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-% \fancyhf{}
-\rhead{\footnotesize \sf page \thepage}
-\lhead{\footnotesize \sf Rougier, Hinsen et al. 2017
-       \textbullet~The ReScience Initiative}
-\rfoot{}
-\cfoot{}
-\lfoot{}
-
-\makeatletter
-\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
-\begin{flushleft}
-  \textbf{\huge\@title\\}
-  \vspace{5mm}
-  \@author
-\end{flushleft}\egroup
-}
-\makeatother
-
-
-%% \newtcbox{\orcid}{enhanced,nobeforeafter,tcbox raise base,boxrule=0.4pt,top=0mm,bottom=0mm,
-%%   right=0mm,left=4mm,arc=1pt,boxsep=2pt,before upper={\vphantom{dlg}},
-%%   colframe=green!50!black,coltext=green!25!black,colback=green!10!white,
-%%   overlay={\begin{tcbclipinterior}\fill[green!75!blue!50!white] (frame.south west)
-%%     rectangle node[text=white,font=\sffamily\bfseries\tiny,rotate=0] {ID} ([xshift=4mm]frame.north west);\end{tcbclipinterior}}}
-
-\newcommand{\hgap}{\hspace{1mm}}
-
-\usepackage{tikz}
-\usetikzlibrary{positioning,shapes,shadows,arrows}
-\newcommand{\orcid}[1]{
-    \tikz[baseline=-0.5ex]{ 
-        \tikzset{lib/.style={
-            rectangle split,
-            rectangle split parts=2,
-            rectangle split horizontal,
-            rectangle split part fill={green!75!blue!50!white,green!10!white},
-            rectangle split draw splits=false,
-            rounded corners=1pt,
-            rectangle split part align={right,right},
-            draw=green!50!black,
-            minimum height=8pt}
-        }
-        \node[lib] (var){
-        \nodepart[text=green!25!black]{two} \footnotesize \href{http://orcid.org/#1}{#1}};
-        \node[text=white,font=\sffamily\bfseries\footnotesize,rotate=0] at ([xshift=6pt]var.west) {ID};
-    }
-}
-
-\title{Sustainable computational science:\\
-       the ReScience initiative}
-\author{%
-  \begin{small}
-    \input{authors.tex}
-  \end{small}
-\begin{footnotesize}
-  \vspace{2mm}
-  \input{affiliations.tex}
-  \vspace{2mm}
-  $^{\star}$ReScience co-founder
-  $^{\dagger}$ReScience editor
-  $^{\ddagger}$ReScience reviewer
-  $^{\S}$ReScience author\\
-  Corresponding author:
-            \href{mailto:Nicolas.Rougier@inria.fr}{Nicolas.Rougier@inria.fr}          
-  \end{footnotesize}
-}
-
-\date{}
-
-\begin{document}
-
-\twocolumn[
-  \maketitle
-  \vspace{5mm}
-  \noindent
-  \textbf{Abstract.}
-  %
+\begin{abstract}
   Computer science offers a large set of tools for prototyping, writing,
   running, testing, validating, sharing and reproducing results, however
   computational science lags behind.  In the best case, authors may provide
@@ -166,24 +116,24 @@
   result. This implies new workflows, in particular in peer-reviews. Existing
   journals have been slow to adapt: source codes are rarely requested, hardly
   ever actually executed to check that they produce the results advertised in
-  the article.
-  %
-  ReScience is a peer-reviewed journal that targets computational research and
-  encourages the explicit replication of already published research, promoting
-  new and open-source implementations in order to ensure that the original
-  research can be replicated from its description. To achieve this goal, the
-  whole publishing chain is radically different from other traditional
-  scientific journals. ReScience resides on GitHub where each new
+  the article.  ReScience is a peer-reviewed journal that targets computational
+  research and encourages the explicit replication of already published
+  research, promoting new and open-source implementations in order to ensure
+  that the original research can be replicated from its description. To achieve
+  this goal, the whole publishing chain is radically different from other
+  traditional scientific journals. ReScience resides on GitHub where each new
   implementation of a computational study is made available together with
-  comments, explanations, and software tests.\\
+  comments, explanations, and software tests.
+\end{abstract}
 
-  \textbf{Keywords:} Open Science, Computational Science,
-                     Reproducibility, Replicability, Journal, Publication
-  %\vspace{10mm}
-  \vfill
-]
+  
+\begin{document}
 
-\clearpage
+\flushbottom
+\maketitle
+\thispagestyle{empty}
+
+
 \section*{Introduction}
 There is a replication crisis in Science \citep{Baker:2016, Munaf:2017}. This
 crisis has been highlighted in fields as diverse as medicine
@@ -204,7 +154,7 @@ strict sense) are no exception \citep{donoho:2009,Manninen:2017} despite the
 fact they rely on code and data rather than on experimental observations, which
 should make them immune to the aforementioned problems.\\
 
-When Collberg and colleagues \citep{collberg:2014, collberg:2015} decided to measure the extent of the problem
+When Collberg and colleagues \citep{collberg:2016} decided to measure the extent of the problem
 precisely, they investigated the availability of code and data as well as {\em the extent to which this code would actually build with reasonable
   effort}. The results were dramatic: of the 515 (out of 613) potentially reproducible
 papers targeted by the study, the authors managed to ultimately run
@@ -370,9 +320,7 @@ the main motivation for the creation of the ReScience journal
 (\href{https://rescience.github.io}{rescience.github.io}) by Konrad Hinsen and
 Nicolas P. Rougier in September 2015.\\
 
-\begin{tcolorbox}[breakable, pad at break*=1mm,
-                  colback=black!2.5, arc=0pt, outer arc=0pt, boxrule=.25pt]
-\begin{footnotesize}
+\begin{small}
 \textbf{Box 1.} Authors having  published in Rescience explain their motivation.\\
 
 \textbf{(\cite{stachelek:2016})} I was motivated to replicate the results of
@@ -412,8 +360,8 @@ which model works and which doesn't, and how a given model has to be parameteriz
 to really work. Without any place to publish it, this knowledge is
 wasted. Publishing it in ReScience, opening the discussion publicly, will be a
 progress for all of us. \par
-\end{footnotesize}
-\end{tcolorbox}
+\end{small}
+
 
 ReScience is an openly-peer-reviewed journal that targets computational research
 and encourages the explicit replication of already published research. In order
@@ -739,7 +687,7 @@ objectives, with nobody in a position to influence ReScience by
 explicit or implicit threats of reducing future funding.
 
 \begin{figure}
-  \includegraphics[width=1.0\columnwidth]{CoScience}
+  \includegraphics[width=0.75\columnwidth]{CoScience}
   \caption{\textbf{A} The ReScience publication chain starts from an
     original research article by authors A, published in a journal, in
     conference proceedings, or as a preprint. This article constitutes
@@ -840,14 +788,11 @@ current replication crisis will lead to a change in attitude, with
 an emphasis on the quality rather than the quantity of scientific ouput,
 with CoScience becoming the gold-standard approach to quality assurance.
 
-% -> Computational vs Experimental: ReScience X (Etienne Roesch)
-
-
 
 % -------------------------------------------------------------- References ---
-\renewcommand*{\bibfont}{\footnotesize}
-\printbibliography[title=References]
 
+
+\bibliography{draft}
 
 \end{document}
 

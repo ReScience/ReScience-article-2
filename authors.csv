@@ -1,0 +1,46 @@
+email, first_name, family_name, institution_name, department, city, state, country, postcode
+nicolas.rougier@inria.fr,               Nicolas P.,   Rougier,   Inria Bordeaux Sud-Ouest, ,                                                  Bordeaux, ,             France,          33405
+konrad.hinsen@cnrs.fr,                  Konrad,       Hinsen,    CNRS, CBM,                                                                   Orléans, ,              France,          45071
+frederic.alexandre@inria.fr,            Frédéric,     Alexandre, Inria Bordeaux Sud-Ouest, ,                                                  Bordeaux, ,             France,          33405
+tha@es.aau.dk,                          Thomas,       Arildsen,  Aalborg University, Technical Faculty of IT and Design - Department of Electronic Systems, Aalborg, , Denmark,
+labarba@gwu.edu,                        Lorena A.,    Barba,     The George Washington University, Mechanical and Aerospace Engineering,      Washington, DC,         USA,             20003
+fabien.benureau@gmail.com,              Fabien C. Y., Benureau,  Inria Bordeaux Sud-Ouest, ,                                                  Bordeaux, ,             France,          33405
+titus@idyll.org,                        C. Titus,     Brown,     University of California Davis, Department of Population Health and Reproduction, Davis, CA,         USA,             95616
+pierre.debuyl@kuleuven.be,              Pierre,       de Buyl,   KU Leuven, Instituut voor Theoretische Fysica,                               Leuven, ,               Belgium,         3001
+ozancag@gmail.com,                      Ozan,         Caglayan,  Université du Maine, Laboratoire d’Informatique (LIUM),                      Le Mans, ,              France,          72085
+andrew.davison@unic.cnrs-gif.fr,        Andrew P.,    Davison,   CNRS, UNIC FRE 3693,                                                         Gif-sur-Yvette, ,       France,          91470
+madelsuc@unistra.fr,                    Marc-André,   Delsuc,    Institut de Génétique et de Biologie Moléculaire et Cellulaire, ,            Illkirch, ,             France,          67404
+gdetorak@uci.edu,                       Georgios,     Detorakis, University of California Irvine, Department of Cognitive Sciences,           Irvine, CA,             USA,             92697
+alexandra.diem@gmail.com,               Alexandra K., Diem,      University of Southampton, Computational Engineering and Design,             Southampton, ,          United Kingdom,  SO17 1BJ
+damien.drix@gmail.com,                  Damien,       Drix,      Humboldt Universität zu Berlin, ,                                            Berlin, ,               Germany,         10099
+pierre.enel@mssm.edu,                   Pierre,       Enel,      Mount Sinai School of Medicine, Neuroscience,                                New York, New York,     USA,             10029
+benoit.girard@isir.upmc.fr,             Benoît,       Girard,    Sorbonne Universités - UPMC Univ Paris 06 - CNRS, Institut des Systèmes Intelligents et de Robotique, Paris, , France, 75005
+o.guest@ucl.ac.uk,                      Olivia,       Guest,     University College London, Experimental Psychology,                          London, Greater London, United Kingdom,  WC1H 0AP
+matt.hall@ucl.ac.uk,                    Matt G.,      Hall,      UCL Great Ormond St Institute of Child Health, ,                             London, ,               United Kingdom,  WC1N 1EH
+rafaelnh21@gmail.com,                   Rafael Neto,  Henriques, MRC Cognition and Brain Sciences Unit, ,                                     Cambridge, ,            United Kingdom,  CB2 7EF
+xavier.hinaut@inria.fr,                 Xavier,       Hinaut,    Inria Bordeaux Sud-Ouest, ,                                                  Bordeaux, ,             France,          33405
+kamil.jaron@unil.ch,                    Kamil S.,     Jaron,     University of Lausanne, Department of Ecology and Evolution,                 Lausanne, ,             Switzerland,     CH 1015
+mehdi.khamassi@upmc.fr,                 Mehdi,        Khamassi,  Sorbonne Universités - UPMC Univ Paris 06 - CNRS, Institute of Intelligent Systems and Robotics, Paris, , France, 75005
+almar.klein@gmail.com,                  Almar,        Klein,     Independent scholar, ,                                                       Enschede, ,             The Netherlands, 7522BW
+tiina.manninen@tut.fi,                  Tiina,        Manninen,  Tampere University of Technology,  BioMediTech Institute and Faculty of Biomedical Sciences and Engineering, Tampere, , Finland, FI-33101
+pietromarchesi92@gmail.com,             Pietro,       Marchesi,  University of Amsterdam, Swammerdam Institute for Life Sciences,             Amsterdam, ,            The Netherlands, 1098XH
+danmcglinn@gmail.com,                   Dan,          McGlinn,   College of Charleston, Department of Biology,                                Charleston, SC,         USA,             29424
+christoph.metzner@gmail.com,            Christoph,    Metzner,   University of Hertfordshire, Centre for Computer Science and Informatics Research, Hatfield, ,       United Kingdom,  AL10 9AB
+owen.petchey@ieu.uzh.ch,                Owen,         Petchey,   University of Zurich, Department of Evolutionary Biology and Environmental Studies, Zurich, ,        Switzerland,     8006
+hans.ekkehard.plesser@nmbu.no,          Hans Ekkehard, Plesser,  Norwegian University of Life Sciences, Faculty of Science and Technology,    Aas, ,                  Norway,          1430
+timothee.poisot@umontreal.ca,           Timothée,     Poisot,    Université de Montréal,  Département de Sciences Biologiques,                Montréal, QC,           Canada,          H2V 2S9
+karthik.ram@berkeley.edu,               Karthik,      Ram,       Berkeley Institute for Data Science, University of California,               Berkeley, CA,           USA,             94720
+yoav@yoavram.com,                       Yoav,         Ram,       Stanford University, Department of Biology,                                  Stanford, CA,           USA,             94305-5020
+e.b.roesch@reading.ac.uk,               Etienne,      Roesch,    University of Reading, Centre for Integrative Neuroscience,                  Reading, ,              United Kingdom,  RG6 6AH
+cyrille.rossant@gmail.com,              Cyrille,      Rossant,   University College London, Institute of Neurology,                           London, ,               United Kingdom,  WC1E 6BT
+vhdrostami@gmail.com,                   Vahid,        Rostami,   Jülich Research Center, Institute of Neuroscience & Medicine,                Jülich, ,               Germany,         52428
+aaronrshifman@gmail.com,                Aaron,        Shifman,   University of Ottawa, Department of Biology,                                 Ottawa, Ontario,        Canada,          ON K1N 6N5
+jstachelek@utexas.edu,                  Joseph,       Stachelek, Michigan State University, Department of Fisheries and Wildlife,             East Lansing, MI,       USA,             48824
+marcel.stimberg@inserm.fr,              Marcel,       Stimberg,  Sorbonne Universités/UPMC Univ Paris 06/INSERM/CNRS/Institut de la Vision, , Paris, ,                France,          75012
+franks@nld.ds.mpg.de,                   Frank,        Stollmeier, Max Planck Institute for Dynamics and Self-Organization, ,                  Göttingen, Lower Saxony, Germany,        37077
+vaggi.federico@gmail.com,               Federico,     Vaggi,     Amazon, ,                                                                    Seattle, WA,             USA,            98101
+guillaume.viejo@gmail.com,              Guillaume,    Viejo,     Sorbonne Universités - UPMC Univ Paris 06 - CNRS, Institute of Intelligent Systems and Robotics, Paris, , France, 75005
+julien.vitay@informatik.tu-chemnitz.de, Julien,       Vitay,     Chemnitz University of Technology, Department of Computer Science,           Chemnitz, Saxony,       Germany,         09107
+vostinar@grinnell.edu,                  Anya E.,      Vostinar,  Grinnell College, Computer Science,                                          Grinnell, IA,           USA,             50112
+rth.yurchak@gmail.com,                  Roman,        Yurchak,   Symerio, ,                                                                   Palaiseau, ,            France,          91120
+tiziano.zito@uni-tuebingen.de,          Tiziano,      Zito,      Eberhard Karls Universität Tübingen, Neural Information Processing Group,    Tübingen, ,             Germany,         72076
