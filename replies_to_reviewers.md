@@ -8,6 +8,8 @@ Concerning what the reviewer calls a defeatist attitude towards computational re
 
 We have reworded some of our statements to make clearer that our doubts about reproducibility apply only to today's state of the start. We have also added a new paragraph on the reproducibility of software environments to the Outlook section.
 
+We have corrected our description of the Github pricing model, referring to public projects rather than Open Source projects.
+
 ## In reply to reviewer 2
 
 We thank the reviewer for his enthusiastic comments, and we would be
