@@ -580,7 +580,9 @@ form of a virtual machine), they represent an additional effort to
 authors and therefore discourage them from submitting replication work to
 ReScience.  Our goal is to develop a set of recommendations for
 authors that represent a workable compromise between reproducibility
-and implementation effort.\\
+and implementation effort. These recommendations will evolve over time,
+and we hope that with improving technology we will ultimately reach full
+reproducibility over a few decades.\\
 
 Another issue with reproducibility is that with today's computing
 technology, long-term reproducibility can only be achieved by imposing
@@ -590,10 +592,10 @@ illustrated by \citet{Mesnard:2016} whose authors report trying to
 reproduce their own work performed two years earlier. Even though
 Barba's group is committed to reproducible research practices, they
 did not escape the many problems one can face when trying to re-run a
-piece of code. As a consequence, the code newly produced for ReScience
-will likely cease to be functional at some point in the future.
-Therefore, the long-term value of a ReScience publication is not the
-actual code but the accompanying article. The combination of the
+piece of code. As a consequence, code that is written for ReScience
+today will likely cease to be functional at some point in the future.
+The long-term value of a ReScience publication lies not just in the
+actual code but also in the accompanying article. The combination of the
 original article and the replication article provide a complete and
 consistent description of the original work, as evidenced by the fact
 that replication was possible. Even 5, 10, or 20 years later, a
@@ -769,6 +771,33 @@ producing PDF articles, but concentrate on long-term improvements in
 the technology of electronic publishing and, most of all, in the
 attitude of the scientific community towards the publication,
 preservation, and verification of computer-aided research.
+
+% -> Reproducible software environments
+
+A fundamental technical issue is the difficulty of archiving or
+accurately describing the software environments in which computational
+scientists perform their work. A publication should be accompanied by
+both a human-readable description of this environment and an
+executable binary form. The human-readable description allows an
+inspection of the versions of all software packages that were used,
+for example to check for the impact of bugs that become known only
+after a study was published. The executable version enables other
+scientists to re-run the analyses and inspect intermediate
+results. Ideally, the human-readable description would permit
+rebuilding the executable version, in the same way that software
+source code permits rebuilding executable binaries. This approach is
+pursued for example by the package manager Guix \citep{Courtes:2015}.
+A more limited but still useful implementation of the same idea exists
+in the form of the conda package manager
+\citep{conda}. Containerization, as implemented e.g. by Docker
+\citep{docker} is currently much discussed, but provides only the
+executable version without a human-readable description. Moreover, the
+long-term stability of the container file format remains to be
+evaluated. History has shown that long-term stability in computing
+technology is achieved only by conventions for which it is a design
+priority, for example the Java Virtual Machine \citep{JVM}. Docker, on
+the contrary, is developed as a deployment technology with no ambition
+towards long-term archiving.
 
 % -> Long term storage: Software Heritage
 
