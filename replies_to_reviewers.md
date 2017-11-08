@@ -10,6 +10,8 @@ We have reworded some of our statements to make clearer that our doubts about re
 
 We have corrected our description of the Github pricing model, referring to public projects rather than Open Source projects.
 
+We have also added a sentence stating that replication authors should base their work exclusively on the contents of the original article. In practice, we have not yet encountered a case where code for the original article was available.
+
 ## In reply to reviewer 2
 
 We thank the reviewer for his enthusiastic comments, and we would be
