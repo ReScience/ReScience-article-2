@@ -791,11 +791,17 @@ rebuilding the executable version, in the same way that software
 source code permits rebuilding executable binaries. This approach is
 pursued for example by the package manager Guix \citep{Courtes:2015}.
 A more limited but still useful implementation of the same idea exists
-in the form of the conda package manager
-\citep{conda}. Containerization, as implemented e.g. by Docker
-\citep{docker} is currently much discussed, but provides only the
-executable version without a human-readable description. Moreover, the
-long-term stability of the container file format remains to be
+in the form of the conda package manager \citep{conda}, which uses a
+so-called environment file to describe and reconstruct environments.
+The main limitation compared to Guix is that the packages that make up
+a conda environment are themselves not reproducible. For example, a
+conda environment file does not state which compiler versions were
+used to build a package.
+
+Containerization, as implemented e.g. by Docker \citep{docker} is
+currently much discussed, but provides only the executable version
+without a human-readable description. Moreover, the long-term
+stability of the container file format remains to be
 evaluated. History has shown that long-term stability in computing
 technology is achieved only by conventions for which it is a design
 priority, for example the Java Virtual Machine \citep{JVM}. Docker, on
