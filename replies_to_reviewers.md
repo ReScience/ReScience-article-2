@@ -8,9 +8,14 @@ Concerning what the reviewer calls a defeatist attitude towards computational re
 
 We have reworded some of our statements to make clearer that our doubts about reproducibility apply only to today's state of the art. We have also added a new paragraph on the reproducibility of software environments to the Outlook section.
 
+We do not discuss continuous analysis because ReScience remains a traditional journal in publishing "finished" articles with a time stamp and a DOI. Continuous analysis is part of a different line of improving on the current publishing model that proposes to replace static articles by dynamic and open development processes. This is an interesting idea but so far in a far more experimental state than any of the innovations in ReScience. ReScience repositories being open, anyone is free to base a continuous analysis project on a replication published in ReScience, and we would be happy to support such attempts, but it is not in the focus of our own work for the near future.
+
 We have corrected our description of the Github pricing model, referring to public projects rather than Open Source projects.
 
 We have also added a sentence stating that replication authors should base their work exclusively on the contents of the original article. In practice, we have not yet encountered a case where code for the original article was available.
+
+The reviewer's proposal of a data-driven summary of ReScience operations is interesting but we do not wish to attempt any form of statistical analysis on a dataset of by now 17 entries. We did add a sentence stating the average duration and length (in numbers of comments) of the review process, but any more sophisticated analysis would be premature at this time.
+
 
 ## In reply to reviewer 2
 
