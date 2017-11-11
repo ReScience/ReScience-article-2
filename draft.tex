@@ -159,7 +159,7 @@
   running, testing, validating, sharing and reproducing results, however
   computational science lags behind.  In the best case, authors may provide
   their source code as a compressed archive and they may feel confident their
-  research is reproducible. But this is not exactly true. James Buckheit and
+  research is reproducible. But this is not exactly true. Jonathan Buckheit and
   David Donoho proposed more than two decades ago that an article about
   computational results is advertising, not scholarship. The actual scholarship
   is the full software environment, code, and data that produced the
@@ -418,15 +418,17 @@ progress for all of us. \par
 ReScience is an openly-peer-reviewed journal that targets computational research
 and encourages the explicit replication of already published research. In order
 to provide the largest possible benefit to the scientific community, replications are
-required to be reproducible and open-source. In less than two years of existence, 12
-articles have been published and 3 are currently under review
+required to be reproducible and open-source. In two years of existence, 17
+articles have been published and 4 are currently under review
 (\href{https://github.com/ReScience/ReScience-submission/pull/20}{\#20},
-\href{https://github.com/ReScience/ReScience-submission/pull/27}{\#27},
-\href{https://github.com/ReScience/ReScience-submission/pull/30}{\#30}). The
+\href{https://github.com/ReScience/ReScience-submission/pull/27}{\#39},
+\href{https://github.com/ReScience/ReScience-submission/pull/30}{\#41},
+\href{https://github.com/ReScience/ReScience-submission/pull/30}{\#43}). The
 editorial board covers a wide range of computational sciences (see
 \url{http://rescience.github.io/board/}) and more than 70 volunteers have registered to be reviewers. The scientific domains of published work
 are computational neuroscience, neuroimaging, computational ecology and
-computer graphics, with a majority in computational neuroscience. There is a
+computer graphics, with a majority in computational neuroscience. The most
+popular programming languages are Python and R. The review process takes about 100~days on average and involves about 50~comments. There is a
 strong bias towards successful replication (100\%); experience has
 taught us that researchers are reluctant to publish failed replications, even when they can prove that the original work is wrong. For young researchers,
 there is a social/professional risk in publishing articles that show
@@ -500,7 +502,10 @@ research will be declared non-replicable.
 
 Since independent implementation is a major feature of replication
 work, ReScience does not allow authors to submit replications of their
-own research, nor the research of close collaborators. Mistakes in the
+own research, nor the research of close collaborators. Moreover,
+replication work should be based exclusively on the originally
+published paper, although exceptions are admitted if properly documented
+in the replication article. Mistakes in the
 implementation of computational models and methods are often due to
 biases that authors invariably have, consciously or not. Such biases
 will inevitably carry over to a replication. Perhaps even more
@@ -568,8 +573,8 @@ the reasons listed above. ReScience reviewers are scientists working
 in the same domain as the submitting authors, because familiarity with
 the field is a condition for judging if a replication is
 successful. But this also means that our reviewers share a significant
-common background with the authors, and that background often includes the
-software packages and programming languages adopted by their
+common background with the authors, and that background often includes
+the software packages and programming languages adopted by their
 community.  In particular, if both authors and reviewers have
 essential libraries of their community installed on their computers,
 they may not notice that these libraries are actually dependencies of
@@ -577,10 +582,16 @@ the submitted code.  While solutions to this problem evidently exist
 (ReScience could, for example, request that authors make their
 software work on a standard computational environment supplied in the
 form of a virtual machine), they represent an additional effort to
-authors and therefore discourage them from submitting replication work to
-ReScience.  Our goal is to develop a set of recommendations for
-authors that represent a workable compromise between reproducibility
-and implementation effort.\\
+authors and therefore discourage them from submitting replication work
+to ReScience. Moreover, the evaluation of \textit{de-facto}
+reproducibility (``works on my machine'') by reviewers is useful as
+well, because it tests the robustness of the code under small
+variations in the computational environments that are inevitable in
+real life. Our goal is to develop a set of recommendations for authors
+that represent a workable compromise between reproducibility,
+robustness, and implementation effort. These recommendations will
+evolve over time, and we hope that with improving technology we will
+ultimately reach full reproducibility over a few decades.\\
 
 Another issue with reproducibility is that with today's computing
 technology, long-term reproducibility can only be achieved by imposing
@@ -590,10 +601,10 @@ illustrated by \citet{Mesnard:2016} whose authors report trying to
 reproduce their own work performed two years earlier. Even though
 Barba's group is committed to reproducible research practices, they
 did not escape the many problems one can face when trying to re-run a
-piece of code. As a consequence, the code newly produced for ReScience
-will likely cease to be functional at some point in the future.
-Therefore, the long-term value of a ReScience publication is not the
-actual code but the accompanying article. The combination of the
+piece of code. As a consequence, code that is written for ReScience
+today will likely cease to be functional at some point in the future.
+The long-term value of a ReScience publication lies not just in the
+actual code but also in the accompanying article. The combination of the
 original article and the replication article provide a complete and
 consistent description of the original work, as evidenced by the fact
 that replication was possible. Even 5, 10, or 20 years later, a
@@ -645,7 +656,7 @@ granted permission.
 
 \href{http://github.com/}{GitHub} is a commercial platform for collaborative
 software development based on the popular version control system
-\href{https://git-scm.com/}{git}. It offers unlimited free use to Open Source
+\href{https://git-scm.com/}{git}. It offers unlimited free use to public
 projects, defined as projects whose contents are accessible to everyone. All
 ReScience activities are organized around a few such Open Source projects
 hosted by GitHub. This is an unusual choice for a scientific journal, the only
@@ -769,6 +780,40 @@ producing PDF articles, but concentrate on long-term improvements in
 the technology of electronic publishing and, most of all, in the
 attitude of the scientific community towards the publication,
 preservation, and verification of computer-aided research.
+
+% -> Reproducible software environments
+
+A fundamental technical issue is the difficulty of archiving or
+accurately describing the software environments in which computational
+scientists perform their work. A publication should be accompanied by
+both a human-readable description of this environment and an
+executable binary form. The human-readable description allows an
+inspection of the versions of all software packages that were used,
+for example to check for the impact of bugs that become known only
+after a study was published. The executable version enables other
+scientists to re-run the analyses and inspect intermediate
+results. Ideally, the human-readable description would permit
+rebuilding the executable version, in the same way that software
+source code permits rebuilding executable binaries. This approach is
+pursued for example by the package manager Guix \citep{Courtes:2015}.
+A more limited but still useful implementation of the same idea exists
+in the form of the conda package manager \citep{conda}, which uses a
+so-called environment file to describe and reconstruct environments.
+The main limitation compared to Guix is that the packages that make up
+a conda environment are themselves not reproducible. For example, a
+conda environment file does not state which compiler versions were
+used to build a package.
+
+Containerization, as implemented e.g. by Docker \citep{docker} is
+currently much discussed, but provides only the executable version
+without a human-readable description. Moreover, the long-term
+stability of the container file format remains to be
+evaluated. History has shown that long-term stability in computing
+technology is achieved only by technology for which it is a design
+priority, as in the case of the Java Virtual Machine
+\citep{JVM}. Docker, on the contrary, is promoted as a deployment
+technology with no visible ambition towards archiving of computational
+environments.
 
 % -> Long term storage: Software Heritage
 
